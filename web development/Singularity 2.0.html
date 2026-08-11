@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Singularity | Cosmic Universe</title>
+
+<link rel="stylesheet" href="singularity.css">
+
+</head>
+<style>
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+margin:0;
+
+font-family:Arial,Helvetica,sans-serif;
+
+background:radial-gradient(circle at center,
+
+#171717 0%,
+
+#090909 40%,
+
+#000000 100%);
+
+color:white;
+
+overflow-x:hidden;}
+nav{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:20px 8%;
+
+}
+
+.logo{
+
+font-size:30px;
+
+font-weight:bold;
+
+color:#8d5cff;
+
+text-shadow:0 0 20px #8d5cff;
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:30px;
+
+list-style:none;
+
+}
+
+nav ul a{
+
+text-decoration:none;
+
+color:white;
+
+transition:.4s;
+
+}
+
+nav ul a:hover,
+nav ul a.active{
+
+color:#8d5cff;
+
+text-shadow:0 0 20px #8d5cff;
+
+}
+.hero{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:120px 8%;
+
+gap:70px;
+
+min-height:90vh;
+
+}
+
+.hero-content{
+
+flex:1;
+
+}
+.hero-content h1{
+
+font-size:105px;
+
+margin-bottom:20px;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+#ffffff,
+
+#8d5cff,
+
+#4cc9f0);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+text-shadow:
+
+0 0 40px rgba(141,92,255,.45);
+
+}
+.hero-content h2{
+
+font-size:42px;
+
+margin-bottom:25px;
+
+color:white;
+
+}
+
+.hero-content p{
+
+font-size:20px;
+
+line-height:2;
+
+color:#d7e6ff;
+
+margin-bottom:40px;
+
+}
+.btn{
+
+display:inline-block;
+
+padding:16px 40px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+color:white;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+#8d5cff,
+
+#4cc9f0);
+
+transition:.4s;
+
+box-shadow:
+
+0 0 30px rgba(141,92,255,.45);
+
+}
+
+.btn:hover{
+
+transform:translateY(-6px);
+
+box-shadow:
+
+0 0 60px #8d5cff;
+
+}
+.hero-image{
+
+flex:1;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.hero-image img{
+
+width:100%;
+
+max-width:550px;
+
+border-radius:50%;
+
+box-shadow:
+
+0 0 50px rgba(141,92,255,.55);
+
+transition:.5s;
+
+}
+
+.hero-image img:hover{
+
+transform:scale(1.05) rotate(3deg);
+
+box-shadow:
+
+0 0 90px #8d5cff;
+
+}
+.gravity-orbit{
+
+padding:120px 8%;
+
+text-align:center;
+
+}
+
+.orbit-container{
+
+position:relative;
+
+width:700px;
+
+height:700px;
+
+margin:80px auto;
+
+}
+.center-circle{
+
+position:absolute;
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%);
+
+width:180px;
+
+height:180px;
+
+border-radius:50%;
+
+background:radial-gradient(circle,#8d5cff,#000);
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:70px;
+
+box-shadow:0 0 60px #8d5cff;
+
+}
+
+.center-circle h3{
+
+font-size:26px;
+
+margin-top:10px;
+
+}
+.orbit{
+
+position:absolute;
+
+width:220px;
+
+padding:20px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(10px);
+
+transition:.4s;
+
+}
+
+.orbit h4{
+
+font-size:24px;
+
+margin:10px 0;
+
+}
+.reveal{
+opacity:0;
+transform:translateY(50px);
+transition:all .8s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+.orbit p{
+
+font-size:16px;
+
+line-height:1.7;
+
+color:#d7e6ff;
+
+}
+.orbit-top{
+
+top:0;
+
+left:50%;
+
+transform:translateX(-50%);
+
+}
+
+.orbit-left{
+
+left:0;
+
+top:50%;
+
+transform:translateY(-50%);
+
+}
+
+.orbit-right{
+
+right:0;
+
+top:50%;
+
+transform:translateY(-50%);
+
+}
+
+.orbit-bottom{
+
+bottom:0;
+
+left:50%;
+
+transform:translateX(-50%);
+
+}
+.orbit-top:hover{
+
+box-shadow:0 0 40px #4cc9f0;
+
+transform:translateX(-50%) scale(1.08);
+
+}
+
+.orbit-left:hover{
+
+box-shadow:0 0 40px #8d5cff;
+
+transform:translateY(-50%) scale(1.08);
+
+}
+
+.orbit-right:hover{
+
+box-shadow:0 0 40px white;
+
+transform:translateY(-50%) scale(1.08);
+
+}
+
+.orbit-bottom:hover{
+
+box-shadow:0 0 40px #ff4fd8;
+
+transform:translateX(-50%) scale(1.08);
+
+}
+.center-circle::before{
+
+content:"";
+
+position:absolute;
+
+width:260px;
+
+height:260px;
+
+border:2px dashed rgba(141,92,255,.35);
+
+border-radius:50%;
+
+animation:spin 20s linear infinite;
+
+}
+@keyframes spin{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+.types{
+
+padding:120px 8%;
+
+}
+
+.types-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:45px;
+
+margin-top:70px;
+
+}
+
+.type-card{
+
+background:rgba(255,255,255,.05);
+
+border-radius:25px;
+
+padding:30px;
+
+text-align:center;
+
+backdrop-filter:blur(10px);
+
+transition:.45s;
+
+}
+.type-card img{
+
+width:180px;
+
+height:180px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+margin-bottom:25px;
+
+transition:.5s;
+
+box-shadow:0 0 30px rgba(141,92,255,.45);
+
+}
+
+.type-card:hover img{
+
+transform:rotate(8deg) scale(1.08);
+
+}
+.type-card h3{
+
+font-size:30px;
+
+margin-bottom:15px;
+
+}
+
+.type-card p{
+
+font-size:17px;
+
+line-height:1.8;
+
+color:#d7e6ff;
+
+margin-bottom:25px;
+
+}
+
+.type-card a{
+
+text-decoration:none;
+
+font-weight:bold;
+
+color:#8d5cff;
+
+}
+.point:hover{
+
+box-shadow:0 0 40px #8d5cff;
+
+}
+
+.ring:hover{
+
+box-shadow:0 0 40px #4cc9f0;
+
+}
+
+.naked:hover{
+
+box-shadow:0 0 40px white;
+
+}
+
+.cosmic:hover{
+
+box-shadow:0 0 40px #ff4fd8;
+
+}
+.numbers{
+
+padding:120px 8%;
+
+}
+
+.numbers-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:40px;
+
+margin-top:70px;
+
+}
+
+.number-card{
+
+background:rgba(255,255,255,.05);
+
+padding:45px 30px;
+
+text-align:center;
+
+border-radius:25px;
+
+backdrop-filter:blur(12px);
+
+transition:.45s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+.number-card h1{
+
+font-size:90px;
+
+margin-bottom:20px;
+
+font-weight:bold;
+
+letter-spacing:3px;
+}
+
+.number-card h3{
+
+font-size:30px;
+
+margin-bottom:20px;
+letter-spacing:3px;
+}
+
+.number-card p{
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#d7e6ff;
+
+}
+.number-card:hover{
+
+transform:translateY(-15px);
+
+}
+
+.number-card:hover h1{
+
+transform:scale(1.1);
+
+transition:.4s;
+
+}
+.infinity{
+
+border-top:5px solid #8d5cff;
+
+}
+
+.infinity h1{
+
+color:#8d5cff;
+
+}
+
+.infinity:hover{
+
+box-shadow:0 0 45px #8d5cff;
+
+}
+
+.size{
+
+border-top:5px solid #4cc9f0;
+
+}
+
+.size h1{
+
+color:#4cc9f0;
+
+}
+
+.size:hover{
+
+box-shadow:0 0 45px #4cc9f0;
+
+}
+
+.gravity{
+
+border-top:5px solid white;
+
+}
+
+.gravity h1{
+
+color:white;
+
+}
+
+.gravity:hover{
+
+box-shadow:0 0 45px white;
+
+}
+
+.universe{
+
+border-top:5px solid #ff4fd8;
+
+}
+
+.universe h1{
+
+color:#ff4fd8;
+
+}
+
+.universe:hover{
+
+box-shadow:0 0 45px #ff4fd8;
+
+}
+.number-card::before{
+
+content:"";
+
+position:absolute;
+
+width:180px;
+
+height:180px;
+
+background:rgba(255,255,255,.05);
+
+border-radius:50%;
+
+top:-80px;
+
+right:-80px;
+
+transition:.5s;
+
+}
+
+.number-card:hover::before{
+
+transform:scale(1.4);
+
+}
+.theories{
+
+padding:120px 8%;
+
+}
+
+.theory-card{
+
+background:rgba(255,255,255,.05);
+
+padding:35px;
+
+margin:35px auto;
+
+border-radius:22px;
+
+backdrop-filter:blur(10px);
+
+transition:.45s;
+
+border-left:7px solid transparent;
+
+max-width:950px;
+
+}
+
+.theory-card h3{
+
+font-size:32px;
+
+margin-bottom:10px;
+
+}
+
+.stars{
+
+font-size:28px;
+
+margin-bottom:20px;
+
+letter-spacing:4px;
+
+}
+
+.theory-card p{
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#d7e6ff;
+
+}
+.relativity{
+
+border-left-color:#8d5cff;
+
+}
+
+.relativity:hover{
+
+box-shadow:0 0 35px #8d5cff;
+
+transform:translateX(12px);
+
+}
+
+.quantum{
+
+border-left-color:#4cc9f0;
+
+}
+
+.quantum:hover{
+
+box-shadow:0 0 35px #4cc9f0;
+
+transform:translateX(12px);
+
+}
+
+.string{
+
+border-left-color:white;
+
+}
+
+.string:hover{
+
+box-shadow:0 0 35px white;
+
+transform:translateX(12px);
+
+}
+
+.loop{
+
+border-left-color:#ff4fd8;
+
+}
+
+.loop:hover{
+
+box-shadow:0 0 35px #ff4fd8;
+
+transform:translateX(12px);
+
+}
+.stars{
+
+color:#FFD700;
+
+text-shadow:
+0 0 15px #FFD700;
+
+}
+.theory-card:hover h3{
+
+color:white;
+
+text-shadow:0 0 20px currentColor;
+
+}
+.footer{
+
+margin-top:120px;
+
+padding:90px 8%;
+
+background:
+linear-gradient(180deg,#08040d,#000000);
+
+border-top:2px solid rgba(141,92,255,.35);
+
+}
+
+.footer-container{
+
+max-width:1200px;
+
+margin:auto;
+
+text-align:center;
+
+}
+.footer h2{
+
+font-size:60px;
+
+margin-bottom:20px;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+#ffffff,
+
+#8d5cff,
+
+#4cc9f0);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+text-shadow:
+
+0 0 35px rgba(141,92,255,.55);
+
+}
+.footer-tagline{
+
+font-size:22px;
+
+letter-spacing:3px;
+
+color:#d7e6ff;
+
+margin-bottom:35px;
+
+}
+
+.footer-quote{
+
+font-size:22px;
+
+line-height:1.9;
+
+font-style:italic;
+
+max-width:900px;
+
+margin:auto;
+
+margin-bottom:50px;
+
+color:white;
+
+}
+.footer-links{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:35px;
+
+margin-bottom:45px;
+
+}
+
+.footer-links a{
+
+text-decoration:none;
+
+color:#d7e6ff;
+
+font-size:18px;
+
+transition:.4s;
+
+}
+
+.footer-links a:hover{
+
+color:#8d5cff;
+
+transform:translateY(-5px);
+
+text-shadow:0 0 18px #8d5cff;
+
+}
+.footer-line{
+
+width:250px;
+
+height:2px;
+
+margin:45px auto;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+#8d5cff,
+
+#4cc9f0);
+
+}
+
+.developer{
+
+font-size:18px;
+
+margin-bottom:10px;
+
+color:white;
+
+}
+
+.copyright{
+
+font-size:17px;
+
+color:#9fb7d8;
+
+}
+.footer h2:hover{
+
+text-shadow:
+
+0 0 20px #8d5cff,
+
+0 0 40px #4cc9f0,
+
+0 0 70px white;
+
+transition:.4s;
+
+}
+</style>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">
+
+🌌 Cosmic Universe
+
+</div>
+
+<ul>
+<li><a href="cosmic universe 3.0.html">Home</a></li>
+<li><a href="blackhole 2.0.html">Black Hole</a></li>
+<li><a href="galaxy 2.0.html">Galaxy</a></li>
+<li><a href="nebula 2.0.html">Nebula</a></li>
+<li><a href="space 2.0.html">Space</a></li>
+<li><a href="quasars 2.0.html">Quasar</a></li>
+<li><a href="Singularity 2.0.html"class="active">Singularity</a></li>
+</ul>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>SINGULARITY</h1>
+
+<h2>🕳 Where Space and Time Break Down</h2>
+
+<p>
+
+A singularity is a point where gravity becomes infinitely strong,
+and the known laws of physics no longer describe reality.
+
+</p>
+
+<a href="https://science.nasa.gov/universe/black-holes/"
+target="_blank"
+rel="noopener noreferrer"
+class="btn">
+
+Explore Mystery 🌌
+
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-41RLtxaRCEesRtF85Bcu3uz_a5YxKc0F19VBeL_7GA&s=10"
+alt="Singularity">
+
+</div>
+
+</section>
+<section class="gravity-orbit reveal">
+
+    <div class="section-title">
+
+        <h2>🕳 Anatomy of a Singularity</h2>
+
+        <p>
+
+            Every singularity is defined by four extraordinary properties
+            that challenge our understanding of the universe.
+
+        </p>
+
+    </div>
+
+    <div class="orbit-container">
+
+        <div class="center-circle">
+
+            ⚫
+
+            <h3>Singularity</h3>
+
+        </div>
+
+        <div class="orbit orbit-top">
+
+            🌌
+
+            <h4>Space-Time</h4>
+
+            <p>
+
+                Gravity bends space and time beyond imagination.
+
+            </p>
+
+        </div>
+
+        <div class="orbit orbit-left">
+
+            🕳
+
+            <h4>Infinite Density</h4>
+
+            <p>
+
+                Matter is compressed into an incredibly tiny point.
+
+            </p>
+
+        </div>
+
+        <div class="orbit orbit-right">
+
+            ⏳
+
+            <h4>Time Dilation</h4>
+
+            <p>
+
+                Time slows dramatically near a singularity.
+
+            </p>
+
+        </div>
+
+        <div class="orbit orbit-bottom">
+
+            💥
+
+            <h4>Infinite Gravity</h4>
+
+            <p>
+
+                Gravity becomes so powerful that even light cannot escape.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="types reveal">
+
+<div class="section-title">
+
+<h2>⚫ Types of Singularities</h2>
+
+<p>
+
+Scientists believe singularities may exist in different forms,
+each with unique properties and mysteries.
+
+</p>
+
+</div>
+
+<div class="types-grid">
+
+<div class="type-card point">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWQigmy2lw6QSRkEfLuLj5gU_zrI_L12KiThEMbgv6tg&s=10" alt="Point Singularity">
+
+<h3>⚫ Point Singularity</h3>
+
+<p>
+
+A zero-dimensional point where all mass is compressed into an infinitely dense location.
+
+</p>
+
+<a href="https://en.wikipedia.org/wiki/Gravitational_singularity"
+target="_blank"
+rel="noopener noreferrer">
+
+Learn More →
+
+</a>
+
+</div>
+
+<div class="type-card ring">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSphTRC_b444dOSCVKsqlJXdrZqm7roveKDxyOCKlWtIQ&s=10" alt="Ring Singularity">
+
+<h3>🌀 Ring Singularity</h3>
+
+<p>
+
+Predicted by rotating black hole models, forming a ring instead of a point.
+
+</p>
+
+<a href="https://en.wikipedia.org/wiki/Kerr_metric"
+target="_blank"
+rel="noopener noreferrer">
+
+Learn More →
+
+</a>
+
+</div>
+
+<div class="type-card naked">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfJSqX-E0CU_oa-QgL4LPijkihfp2VaMEh5DQO3Gf8OQ&s=10" alt="Naked Singularity">
+
+<h3>🌌 Naked Singularity</h3>
+
+<p>
+
+A hypothetical singularity not hidden behind an event horizon.
+
+</p>
+
+<a href="https://en.wikipedia.org/wiki/Naked_singularity"
+target="_blank"
+rel="noopener noreferrer">
+
+Learn More →
+
+</a>
+
+</div>
+
+<div class="type-card cosmic">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGtAIZp23eWsxsGEejA7GoO79KEE2YGQSoyIW_EPZfBg&s=10"alt="Cosmological Singularity">
+
+<h3>💥 Cosmological</h3>
+
+<p>
+
+Associated with the Big Bang, where the universe began from an extremely dense state.
+
+</p>
+
+<a href="https://science.nasa.gov/universe/"
+target="_blank"
+rel="noopener noreferrer">
+
+Learn More →
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+<section class="numbers reveal">
+
+<div class="section-title">
+
+<h2>📊 Singularity By Numbers</h2>
+
+<p>
+
+The incredible numbers that define one of the universe's greatest mysteries.
+
+</p>
+
+</div>
+
+<div class="numbers-grid">
+
+<div class="number-card infinity">
+
+<h1>∞</h1>
+
+<h3>Infinite Density</h3>
+
+<p>
+
+Physics predicts density approaching infinity at the singularity.
+
+</p>
+
+</div>
+
+<div class="number-card size">
+
+<h1>0</h1>
+
+<h3>Known Size</h3>
+
+<p>
+
+A gravitational singularity is described as having no measurable volume.
+
+</p>
+
+</div>
+
+<div class="number-card gravity">
+
+<h1>100%</h1>
+
+<h3>Gravity Dominates</h3>
+
+<p>
+
+Gravity overwhelms every other known force in this extreme environment.
+
+</p>
+
+</div>
+
+<div class="number-card universe">
+
+<h1>13.8B</h1>
+
+<h3>Years</h3>
+
+<p>
+
+Scientists study singularities to understand the earliest moments of our universe.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<section class="theories">
+
+<div class="section-title">
+
+<h2>🧠 Battle of Theories</h2>
+
+<p>
+
+Scientists have proposed different ideas to explain what happens
+inside a singularity.
+
+</p>
+
+</div>
+
+<div class="theory-card relativity">
+
+<h3>📚 General Relativity</h3>
+
+<div class="stars">⭐⭐⭐⭐☆</div>
+
+<p>
+
+Einstein predicted singularities through General Relativity,
+but the equations break down at infinite density.
+
+</p>
+
+</div>
+
+<div class="theory-card quantum">
+
+<h3>⚛ Quantum Gravity</h3>
+
+<div class="stars">⭐⭐⭐⭐⭐</div>
+
+<p>
+
+Quantum Gravity aims to unite quantum mechanics with gravity,
+possibly removing infinite density.
+
+</p>
+
+</div>
+
+<div class="theory-card string">
+
+<h3>🧵 String Theory</h3>
+
+<div class="stars">⭐⭐⭐☆☆</div>
+
+<p>
+
+Matter is made of tiny vibrating strings instead of point particles.
+
+</p>
+
+</div>
+
+<div class="theory-card loop">
+
+<h3>🔄 Loop Quantum Gravity</h3>
+
+<div class="stars">⭐⭐⭐⭐☆</div>
+
+<p>
+
+Suggests space-time itself has a quantum structure made of tiny loops.
+
+</p>
+
+</div>
+
+</section>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <h2>⚫ Singularity</h2>
+
+        <p class="footer-tagline">
+
+            Where Gravity Redefines Reality
+
+        </p>
+
+        <p class="footer-quote">
+
+            "A singularity is not just the end of space and time,
+            but the beginning of humanity's greatest scientific mystery."
+
+        </p>
+
+        <div class="footer-links">
+
+            <a href="cosmic universe.html">🏠 Home</a>
+
+            <a href="blackhole 2.0.html">⚫ Black Hole</a>
+
+            <a href="galaxy 2.0.html">🌌 Galaxy</a>
+
+            <a href="nebula 2.0.html">☁ Nebula</a>
+
+            <a href="space 2.0.html">🚀 Space</a>
+
+            <a href="quasar 2.0.html">⚡ Quasar</a>
+
+            <a href="singularity 2.0.html">🕳 Singularity</a>
+
+        </div>
+
+        <div class="footer-line"></div>
+
+        <p class="developer">
+
+            ❤️ Designed & Developed by <strong>Joydeep</strong>
+
+        </p>
+
+        <p class="copyright">
+
+            © 2026 Cosmic Universe • All Rights Reserved
+
+        </p>
+
+    </div>
+
+</footer>
+<script>
+const reveals=document.querySelectorAll('.reveal');
+
+function revealOnScroll(){
+
+reveals.forEach(element=>{
+
+const windowHeight=window.innerHeight;
+
+const revealTop=element.getBoundingClientRect().top;
+
+if(revealTop<windowHeight-100){
+
+element.classList.add('active');
+
+}
+
+});
+
+}
+
+window.addEventListener('scroll',revealOnScroll);
+
+revealOnScroll();
+</script>
+</body>
+</html>

@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cosmic Universe 3.0</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+color:white;
+overflow-x:hidden;
+background:
+radial-gradient(circle at top,
+#2d1b69 0%,
+#0b1020 35%,
+#020308 70%,
+#000000 100%);
+}
+
+
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:22px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.25);
+backdrop-filter:blur(12px);
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#8d5cff;
+text-shadow:0 0 18px #8d5cff;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:32px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-size:17px;
+transition:.35s;
+}
+
+nav a:hover{
+color:#8d5cff;
+text-shadow:0 0 15px #8d5cff;
+}
+.hero{
+min-height:72vh;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:110px 8% 30px;
+gap:60px;
+}
+
+.hero h1{
+font-size:64px;
+line-height:1;
+font-weight:900;
+margin-bottom:18px;
+background:linear-gradient(90deg,#ffffff,#8d5cff,#4cc9f0);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero-description{
+font-size:18px;
+line-height:1.8;
+color:#d7e6ff;
+max-width:520px;
+margin-bottom:30px;
+}
+
+.hero-image img{
+width:100%;
+max-width:460px;
+border-radius:50%;
+box-shadow:
+0 0 35px rgba(141,92,255,.4),
+0 0 70px rgba(76,201,240,.2);
+animation:float 6s ease-in-out infinite;
+}
+
+
+.hero-content{
+flex:1;
+}
+
+.hero-label{
+font-size:14px;
+letter-spacing:4px;
+color:#8d5cff;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+display:block;
+margin-top:10px;
+background:linear-gradient(90deg,#8d5cff,#4cc9f0,#ffffff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+text-shadow:0 0 40px rgba(141,92,255,.45);
+}
+
+.hero-buttons{
+display:flex;
+gap:22px;
+flex-wrap:wrap;
+}
+
+.btn{
+display:inline-block;
+padding:16px 34px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+transition:.4s;
+}
+
+.primary{
+background:linear-gradient(90deg,#8d5cff,#4cc9f0);
+color:white;
+box-shadow:0 0 30px rgba(141,92,255,.4);
+}
+
+.primary:hover{
+transform:translateY(-5px);
+box-shadow:0 0 50px #8d5cff;
+}
+
+.secondary{
+border:2px solid #8d5cff;
+color:white;
+background:transparent;
+}
+
+.secondary:hover{
+background:#8d5cff;
+transform:translateY(-5px);
+}
+
+.hero-image{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.hero-image::before{
+content:"";
+position:absolute;
+width:650px;
+height:650px;
+border-radius:50%;
+background:radial-gradient(circle,
+rgba(141,92,255,.25),
+rgba(76,201,240,.15),
+transparent 70%);
+filter:blur(40px);
+z-index:-1;
+}
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+}
+.hero-image img:hover{
+
+transform:scale(1.05);
+
+transition:.5s;
+
+}
+.featured{
+padding:120px 8%;
+}
+.destination-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.destination-card{
+position:relative;
+height:430px;
+border-radius:28px;
+overflow:hidden;
+cursor:pointer;
+transition:transform .45s ease, box-shadow .45s ease;
+background:#111;
+isolation:isolate;
+}
+
+.destination-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:transform .7s ease;
+}
+
+.destination-card::before{
+content:"";
+position:absolute;
+inset:-2px;
+border-radius:30px;
+background:linear-gradient(135deg,
+rgba(141,92,255,.5),
+rgba(76,201,240,.35),
+transparent 70%);
+opacity:0;
+transition:opacity .45s ease;
+z-index:0;
+}
+
+.destination-card::after{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(
+to top,
+rgba(0,0,0,.92) 8%,
+rgba(0,0,0,.45) 48%,
+rgba(0,0,0,.12) 100%);
+z-index:1;
+}
+
+.destination-content{
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+padding:28px;
+z-index:2;
+transform:translateY(10px);
+transition:transform .45s ease;
+}
+
+.destination-content h3{
+font-size:32px;
+margin:12px 0;
+}
+
+.destination-content p{
+font-size:17px;
+line-height:1.7;
+color:#d7e6ff;
+margin-bottom:22px;
+}
+
+.destination-btn{
+display:inline-block;
+padding:12px 24px;
+border-radius:999px;
+background:linear-gradient(90deg,#8d5cff,#4cc9f0);
+color:#fff;
+text-decoration:none;
+font-weight:700;
+transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.destination-card:hover{
+transform:translateY(-12px) scale(1.02);
+box-shadow:0 18px 45px rgba(0,0,0,.45);
+}
+
+.destination-card:hover::before{
+opacity:1;
+}
+
+.destination-card:hover img{
+transform:scale(1.12);
+}
+
+.destination-card:hover .destination-content{
+transform:translateY(-4px);
+}
+
+.destination-card:hover .destination-btn{
+transform:translateY(-2px);
+box-shadow:0 0 26px rgba(141,92,255,.7);
+}
+
+.world-card{
+background:rgba(255,255,255,.05);
+border-radius:28px;
+overflow:hidden;
+backdrop-filter:blur(10px);
+transition:.45s;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.world-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+transition:.5s;
+}
+
+.world-card h3{
+font-size:30px;
+padding:25px 25px 10px;
+}
+
+.world-card p{
+padding:0 25px;
+font-size:17px;
+line-height:1.8;
+color:#d7e6ff;
+min-height:90px;
+}
+
+.explore-btn{
+display:inline-block;
+margin:25px;
+padding:12px 26px;
+border-radius:50px;
+background:linear-gradient(90deg,#8d5cff,#4cc9f0);
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:.4s;
+}
+
+.world-card:hover{
+transform:translateY(-12px);
+box-shadow:0 0 40px rgba(141,92,255,.4);
+}
+
+.world-card:hover img{
+transform:scale(1.08);
+}
+
+.explore-btn:hover{
+box-shadow:0 0 30px #8d5cff;
+}
+
+.blackhole:hover{ box-shadow:0 0 40px #8d5cff; }
+.galaxy:hover{ box-shadow:0 0 40px #4cc9f0; }
+.nebula:hover{ box-shadow:0 0 40px #ff4fd8; }
+.space:hover{ box-shadow:0 0 40px white; }
+.quasar:hover{ box-shadow:0 0 40px #ffd166; }
+.singularity:hover{ box-shadow:0 0 40px #6ef3ff; }
+
+.stats{
+padding:120px 8%;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.stat-card{
+background:rgba(255,255,255,.05);
+border-radius:25px;
+padding:40px 30px;
+text-align:center;
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,.08);
+transition:.4s;
+}
+
+.stat-card h3{
+font-size:42px;
+color:#8d5cff;
+margin-bottom:15px;
+}
+
+.stat-card p{
+font-size:18px;
+line-height:1.7;
+color:#d7e6ff;
+}
+
+.stat-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 35px rgba(141,92,255,.4);
+}
+.journey{
+padding:120px 8%;
+}
+
+.timeline{
+max-width:900px;
+margin:70px auto 0;
+position:relative;
+}
+
+.timeline::before{
+content:"";
+position:absolute;
+left:40px;
+top:0;
+width:3px;
+height:100%;
+background:linear-gradient(#8d5cff,#4cc9f0);
+}
+
+.timeline-item{
+display:flex;
+align-items:flex-start;
+gap:30px;
+margin-bottom:50px;
+position:relative;
+}
+
+.timeline-icon{
+width:80px;
+height:80px;
+border-radius:50%;
+background:rgba(141,92,255,.15);
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:34px;
+border:2px solid #8d5cff;
+box-shadow:0 0 25px rgba(141,92,255,.35);
+z-index:2;
+}
+
+.timeline-content{
+background:rgba(255,255,255,.05);
+padding:25px;
+border-radius:22px;
+backdrop-filter:blur(10px);
+flex:1;
+transition:.4s;
+}
+
+.timeline-content h3{
+font-size:28px;
+margin-bottom:12px;
+}
+
+.timeline-content p{
+font-size:17px;
+line-height:1.8;
+color:#d7e6ff;
+}
+
+.timeline-content:hover{
+transform:translateX(12px);
+box-shadow:0 0 30px rgba(141,92,255,.35);
+}
+.stars{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-1;
+pointer-events:none;
+}
+
+.stars span{
+position:absolute;
+display:block;
+width:3px;
+height:3px;
+background:white;
+border-radius:50%;
+box-shadow:0 0 8px white;
+animation:twinkle linear infinite;
+animation-duration:calc(18s + var(--i) * 1s);
+opacity:.8;
+}
+
+.stars span:nth-child(1){left:5%; top:10%;}
+.stars span:nth-child(2){left:15%; top:25%;}
+.stars span:nth-child(3){left:30%; top:8%;}
+.stars span:nth-child(4){left:42%; top:35%;}
+.stars span:nth-child(5){left:55%; top:15%;}
+.stars span:nth-child(6){left:70%; top:28%;}
+.stars span:nth-child(7){left:82%; top:12%;}
+.stars span:nth-child(8){left:92%; top:40%;}
+.stars span:nth-child(9){left:12%; top:55%;}
+.stars span:nth-child(10){left:26%; top:72%;}
+.stars span:nth-child(11){left:40%; top:62%;}
+.stars span:nth-child(12){left:58%; top:80%;}
+.stars span:nth-child(13){left:74%; top:68%;}
+.stars span:nth-child(14){left:88%; top:88%;}
+.stars span:nth-child(15){left:8%; top:90%;}
+.stars span:nth-child(16){left:36%; top:48%;}
+.stars span:nth-child(17){left:64%; top:46%;}
+.stars span:nth-child(18){left:96%; top:70%;}
+
+@keyframes twinkle{
+0%{
+transform:translateY(0) scale(.8);
+opacity:.3;
+}
+50%{
+transform:translateY(-20px) scale(1.4);
+opacity:1;
+}
+100%{
+transform:translateY(-40px) scale(.8);
+opacity:.2;
+}
+}
+.scroll-indicator{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:8px;
+padding:0 0 20px;
+color:#cfd8ea;
+font-size:13px;
+letter-spacing:3px;
+text-transform:uppercase;
+text-align:center;
+opacity:.9;
+}
+
+.arrow{
+font-size:28px;
+animation:bounce 2s infinite;
+color:#8d5cff;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(10px);}
+}
+.nebula:hover{
+box-shadow:0 0 40px #ff4fd8;
+}
+
+.space:hover{
+box-shadow:0 0 40px white;
+}
+
+.quasar:hover{
+box-shadow:0 0 40px #ffd166;
+}
+.cosmic-divider{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+padding:40px 8%;
+}
+
+.divider-line{
+width:180px;
+height:2px;
+background:linear-gradient(90deg,
+transparent,
+#8d5cff,
+#4cc9f0,
+transparent);
+}
+
+.divider-orb{
+width:56px;
+height:56px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:22px;
+color:white;
+background:radial-gradient(circle,#8d5cff,#4cc9f0);
+box-shadow:
+0 0 25px #8d5cff,
+0 0 45px rgba(76,201,240,.5);
+animation:pulseOrb 3s ease-in-out infinite;
+}
+
+@keyframes pulseOrb{
+0%,100%{
+transform:scale(1);
+box-shadow:
+0 0 25px #8d5cff,
+0 0 45px rgba(76,201,240,.5);
+}
+50%{
+transform:scale(1.15);
+box-shadow:
+0 0 40px #8d5cff,
+0 0 70px rgba(76,201,240,.7);
+}
+}
+.reveal{
+opacity:0;
+transform:translateY(50px);
+transition:all .8s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+.footer{
+margin-top:80px;
+padding:60px 8% 25px;
+background:linear-gradient(
+180deg,
+rgba(10,10,20,.95),
+rgba(5,5,10,.98)
+);
+border-top:1px solid rgba(141,92,255,.25);
+}
+
+.footer-content{
+display:grid;
+grid-template-columns:1.8fr 1fr 1fr;
+gap:40px;
+align-items:start;
+}
+
+.footer-links{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.footer-links a{
+display:block;
+color:#cfd8ea;
+text-decoration:none;
+}
+
+.footer-bottom{
+margin-top:40px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,.08);
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.back-to-top{
+width:48px;
+height:48px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+color:white;
+font-size:22px;
+background:linear-gradient(135deg,#8d5cff,#4cc9f0);
+box-shadow:0 0 25px rgba(141,92,255,.45);
+transition:.35s;
+}
+
+.back-to-top:hover{
+transform:translateY(-6px) scale(1.08);
+box-shadow:0 0 40px #8d5cff;
+}
+
+@media(max-width:900px){
+
+.footer-content{
+grid-template-columns:1fr;
+gap:40px;
+}
+
+.footer-bottom{
+flex-direction:column;
+gap:20px;
+text-align:center;
+}
+
+}
+@media (max-width: 768px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+gap:40px;
+padding:120px 6% 40px;
+}
+
+.hero-content{
+max-width:100%;
+}
+
+.hero h1{
+font-size:46px;
+line-height:1.05;
+}
+
+.hero-description{
+font-size:16px;
+max-width:100%;
+}
+
+.hero-buttons{
+justify-content:center;
+}
+
+.hero-image img{
+max-width:320px;
+}
+
+}
+</style>
+
+</head>
+<body>
+    <div class="stars">
+    <span style="--i:11;"></span>
+    <span style="--i:17;"></span>
+    <span style="--i:23;"></span>
+    <span style="--i:7;"></span>
+    <span style="--i:15;"></span>
+    <span style="--i:29;"></span>
+    <span style="--i:9;"></span>
+    <span style="--i:19;"></span>
+    <span style="--i:27;"></span>
+    <span style="--i:13;"></span>
+    <span style="--i:31;"></span>
+    <span style="--i:21;"></span>
+    <span style="--i:5;"></span>
+    <span style="--i:25;"></span>
+    <span style="--i:33;"></span>
+    <span style="--i:14;"></span>
+    <span style="--i:18;"></span>
+    <span style="--i:30;"></span>
+</div>
+
+<header>
+
+<div class="logo">🌌 Cosmic Universe</div>
+
+<nav>
+<ul>
+<li><a href="cosmic universe 3.0.html" class="active">Home</a></li>
+<li><a href="blackhole 2.0.html">Black Hole</a></li>
+<li><a href="galaxy 2.0.html">Galaxy</a></li>
+<li><a href="nebula 2.0.html">Nebula</a></li>
+<li><a href="space 2.0.html">Space</a></li>
+<li><a href="quasars 2.0.html">Quasar</a></li>
+<li><a href="Singularity 2.0.html">Singularity</a></li>
+</ul>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content"> 
+
+<p class="hero-label">Cosmic Collection</p>
+<h1>
+    Into
+    <span>COSMOS</span>
+</h1>
+<p class="hero-description">
+      Explore black holes, galaxies, nebulae, quasars,
+    and the mysteries of deep space.
+</p>
+<div class="hero-buttons">
+<a href="https://science.nasa.gov/universe/"
+target="_blank"
+rel="noopener noreferrer"  class="btn primary">Explore the Cosmos</a>
+
+<a href="https://en.wikipedia.org/wiki/Universe"
+target="_blank"
+rel="noopener noreferrer" class="btn secondary">Watch the Journey</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="images/universe.jfif" alt="Cosmic Planet">
+
+</div>
+</section>
+<div class="scroll-indicator">
+    <span>Scroll to Explore</span>
+    <div class="arrow">⌄</div>
+</div>
+<div class="cosmic-divider reveal">
+    <div class="divider-line"></div>
+    <div class="divider-orb">✦</div>
+    <div class="divider-line"></div>
+</div>
+<section class="destination reveal">
+    <div class="destination-grid">
+
+        <!-- BLACK HOLE -->
+        <div class="destination-card blackhole">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyj17rU2yTJtDu8OPEY7mEJMziju-gRfMwkrlc-SJKTg&s=10" alt="Black Hole">
+
+            <div class="destination-content">
+                <span class="destination-tag">Gravity</span>
+                <h3> Black Hole</h3>
+
+                <p>
+                    Cross the event horizon and discover the most
+                    mysterious objects in the universe.
+                </p>
+
+                <a href="blackhole 2.0.html" class="destination-btn">
+                    Enter the Event Horizon →
+                </a>
+            </div>
+        </div>
+
+        <!-- GALAXY -->
+        <div class="destination-card galaxy">
+            <img src="images/GALAXY.jfif" alt="Galaxy">
+
+            <div class="destination-content">
+                <span class="destination-tag">Exploration</span>
+                <h3>Galaxy</h3>
+
+                <p>
+                    Travel through billions of stars and breathtaking
+                    spiral structures across deep space.
+                </p>
+
+                <a href="galaxy 2.0.html" class="destination-btn">
+                    Explore the Galaxy →
+                </a>
+            </div>
+        </div>
+
+        <!-- SINGULARITY -->
+        <div class="destination-card singularity">
+            <img src="images/singularity.jfif" alt="Singularity">
+
+            <div class="destination-content">
+                <span class="destination-tag">Mystery</span>
+                <h3> Singularity</h3>
+
+                <p>
+                    Approach the ultimate mystery where space, time,
+                    and physics reach their limits.
+                </p>
+
+                <a href="Singularity 2.0.html" class="destination-btn">
+                    Enter the Unknown →
+                </a>
+            </div>
+        </div>
+
+        <!-- NEBULA -->
+        <div class="destination-card nebula">
+            <img src="images/eagle nebula.jfif" alt="Nebula">
+
+            <div class="destination-content">
+                <span class="destination-tag">Creation</span>
+                <h3>Nebula</h3>
+
+                <p>
+                    Witness the birth of stars inside colorful clouds
+                    of gas and cosmic dust.
+                </p>
+
+                <a href="nebula 2.0.html" class="destination-btn">
+                    Enter the Nebula →
+                </a>
+            </div>
+        </div>
+
+        <!-- SPACE -->
+        <div class="destination-card space">
+            <img src="images/apollo 11.jfif" alt="Space">
+
+            <div class="destination-content">
+                <span class="destination-tag">Discovery</span>
+                <h3> Space</h3>
+
+                <p>
+                    Explore planets, moons, astronauts, and the vast
+                    expanse beyond our world.
+                </p>
+
+                <a href="space 2.0.html" class="destination-btn">
+                    Launch Into Space →
+                </a>
+            </div>
+        </div>
+
+        <!-- QUASAR -->
+        <div class="destination-card quasar">
+            <img src="images/quasars.jfif" alt="Quasar">
+
+            <div class="destination-content">
+                <span class="destination-tag">Energy</span>
+                <h3> Quasar</h3>
+
+                <p>
+                    Experience the most luminous and energetic objects
+                    ever discovered in the universe.
+                </p>
+
+                <a href="quasars 2.0.html" class="destination-btn">
+                    Witness the Power →
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="stats reveal">
+    <div class="section-title">
+        <h2>Cosmic Statistics</h2>
+        <p>A glimpse into the incredible scale of our universe.</p>
+    </div>
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <h3>2 Trillion</h3>
+            <p>Estimated galaxies in the observable universe.</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>13.8 Billion</h3>
+            <p>Age of the universe in years.</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>100+ Billion</h3>
+            <p>Stars in the Milky Way galaxy.</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>93 Billion</h3>
+            <p>Light-years across the observable universe.</p>
+        </div>
+
+    </div>
+
+</section>
+<section class="journey reveal">
+
+    <div class="section-title">
+        <h2> The Cosmic Journey</h2>
+        <p>
+            Travel through the universe step by step, from the birth of stars
+            to the mysteries beyond black holes.
+        </p>
+    </div>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <div class="timeline-icon"></div>
+            <div class="timeline-content">
+                <h3>Nebulae</h3>
+                <p>Massive clouds of gas and dust where stars begin their life.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-icon"></div>
+            <div class="timeline-content">
+                <h3>Galaxies</h3>
+                <p>Billions of stars come together to form breathtaking cosmic structures.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-icon"></div>
+            <div class="timeline-content">
+                <h3>Quasars</h3>
+                <p>Supermassive black holes power the brightest objects in the universe.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-icon"></div>
+            <div class="timeline-content">
+                <h3>Black Holes</h3>
+                <p>Gravity becomes so powerful that not even light can escape.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-icon"></div>
+            <div class="timeline-content">
+                <h3>Singularity</h3>
+                <p>The ultimate mystery where space, time, and known physics reach their limits.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <h2>Cosmic Universe</h2>
+            <p>
+                Explore the wonders of black holes, galaxies,
+                nebulae, quasars, and the mysteries of deep space.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Explore</h3>
+            <a href="blackhole 2.0.html">Black Hole</a>
+            <a href="galaxy 2.0.html">Galaxy</a>
+            <a href="nebula 2.0.html">Nebula</a>
+            <a href="space 2.0.html">Space</a>
+            <a href="quasar 2.0.html">Quasar</a>
+            <a href="Singularity 2.0.html">Singularity</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>Resources</h3>
+            <a href="https://science.nasa.gov/universe/" target="_blank">NASA Universe</a>
+            <a href="https://www.esa.int/" target="_blank">ESA</a>
+            <a href="https://hubblesite.org/" target="_blank">Hubble</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Cosmic Universe. Crafted for exploration.</p>
+
+        <a href="#top" class="back-to-top">↑</a>
+    </div>
+
+</footer>
+<script>
+const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+    reveals.forEach((element) => {
+        const windowHeight = window.innerHeight;
+        const revealTop = element.getBoundingClientRect().top;
+        const revealPoint = 120;
+
+        if (revealTop < windowHeight - revealPoint) {
+            element.classList.add('active');
+        } else {
+            element.classList.remove('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+</script>
+</body>
+</html>

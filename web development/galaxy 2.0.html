@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Galaxy | Cosmic Universe</title>
+</head>
+<style>
+    .about{
+
+padding:100px 8%;
+
+}
+
+.about h2{
+
+text-align:center;
+
+font-size:56px;
+
+color:#66ccff;
+
+margin-bottom:70px;
+
+text-shadow:0 0 20px rgba(102,204,255,.5);
+
+}
+
+.about-container{
+
+display:flex;
+
+align-items:center;
+
+gap:60px;
+
+}
+
+.about-image{
+
+flex:1;
+
+}
+
+.about-image img{
+
+width:100%;
+
+border-radius:25px;
+
+box-shadow:0 0 35px rgba(102,204,255,.3);
+
+transition:.5s ease;
+
+}
+
+.about-image img:hover{
+
+transform:scale(1.03);
+
+rotate:(-1deg);
+
+box-shadow:0 0 50px #66ccff;
+
+}
+
+.about-content{
+
+flex:1;
+
+}
+
+.about-content p{
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#d6e8ff;
+
+margin-bottom:35px;
+
+}
+    .btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 35px;
+    background:#66ccff;
+    color:#050816;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.4s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 30px #66ccff;
+}
+    body{background-color:#030712;}
+    .hero{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:120px 8%;
+
+gap:60px;
+
+min-height:90vh;
+
+}
+
+.hero-content{
+
+flex:1;
+
+}
+
+.hero-content h1{
+
+font-size:80px;
+
+color:#66ccff;
+
+margin-bottom:25px;
+
+text-shadow:0 0 20px rgba(102,204,255,.5);
+
+}
+.stars{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.stars span{
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px cyan;
+    animation: twinkle 4s infinite;
+}
+
+.stars span:nth-child(1){top:10%; left:15%;}
+.stars span:nth-child(2){top:25%; left:70%;}
+.stars span:nth-child(3){top:45%; left:35%;}
+.stars span:nth-child(4){top:65%; left:85%;}
+.stars span:nth-child(5){top:80%; left:20%;}
+.stars span:nth-child(6){top:55%; left:55%;}
+.stars span:nth-child(7){top:15%; left:90%;}
+.stars span:nth-child(8){top:90%; left:60%;}
+
+@keyframes twinkle{
+
+0%,100%{
+    opacity:.2;
+    transform:scale(1);
+}
+
+50%{
+    opacity:1;
+    transform:scale(2);
+}
+
+}
+.hero-content h2{font-size:70px;
+
+color:#66ccff;
+
+margin-bottom:25px;
+
+text-shadow:0 0 20px rgba(102,204,255,.5);
+}
+
+.hero-content p{
+
+font-size:20px;
+
+line-height:1.8;
+
+color:#d6e8ff;
+
+margin-bottom:35px;
+
+}
+
+.hero-image{
+
+flex:1;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.hero-image img{
+
+width:100%;
+
+max-width:550px;
+
+border-radius:50%;
+
+box-shadow:0 0 60px rgba(102,204,255,.4);
+
+transition:.5s;
+
+}
+
+.hero-image img:hover{
+
+transform:scale(1.05) rotate(5deg);
+
+box-shadow:0 0 80px rgba(102,204,255,.8);
+
+}
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+.logo{
+    color:#66ccff;
+    font-size:28px;
+    font-weight:bold;
+}
+nav ul li a:hover,
+nav ul li a.active{
+    color:#66ccff;
+    text-shadow:0 0 15px #66ccff;
+}
+.feature-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:20px;
+
+}
+
+.feature{
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(102,204,255,.25);
+
+padding:20px;
+
+border-radius:18px;
+
+transition:.4s;
+
+backdrop-filter:blur(8px);
+
+}
+
+.feature:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 25px rgba(102,204,255,.5);
+
+}
+
+.feature h3{
+
+color:#66ccff;
+
+margin-bottom:12px;
+
+font-size:22px;
+
+}
+
+.feature p{
+
+font-size:15px;
+
+color:#d6e8ff;
+
+}
+.types{
+
+padding:120px 8%;
+
+text-align:center;
+
+}
+
+.types h2{
+
+font-size:55px;
+
+color:#66ccff;
+
+margin-bottom:70px;
+
+text-shadow:0 0 20px #66ccff;
+
+}
+
+.galaxy-container{
+
+display:flex;
+
+justify-content:center;
+
+gap:35px;
+
+flex-wrap:wrap;
+
+}
+.galaxy-card{
+
+width:350px;
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(102,204,255,.25);
+
+border-radius:25px;
+
+overflow:hidden;
+
+transition:.5s;
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 0 20px rgba(102,204,255,.15);
+
+}
+.galaxy-card img{
+
+width:100%;
+
+height:230px;
+
+object-fit:cover;
+
+transition:.6s;
+
+}
+.spiral h3{
+    color:#66ccff;
+}
+
+.spiral:hover{
+    box-shadow:0 0 35px #66ccff;
+    border-color:#66ccff;
+}
+.elliptical h3{
+    color:#FFD700;
+}
+
+.elliptical:hover{
+    box-shadow:0 0 35px #FFD700;
+    border-color:#FFD700;
+}
+.irregular h3{
+    color:#B266FF;
+}
+
+.irregular:hover{
+    box-shadow:0 0 35px #B266FF;
+    border-color:#B266FF;
+}
+.spiral:hover img{
+    box-shadow:0 0 30px #66ccff;
+}
+
+.elliptical:hover img{
+    box-shadow:0 0 30px #FFD700;
+}
+
+.irregular:hover img{
+    box-shadow:0 0 30px #B266FF;
+}
+.galaxy-card p{
+
+padding:0 25px 35px;
+
+line-height:1.8;
+
+color:#d6e8ff;
+
+}
+.galaxy-card:hover{
+
+transform:translateY(-20px);
+
+box-shadow:0 0 40px #66ccff;
+
+}
+
+.galaxy-card:hover img{
+
+transform:scale(1.15);
+
+}
+.galaxy-card:hover{
+
+transform:translateY(-20px);
+
+box-shadow:0 0 40px #66ccff;
+
+}
+
+.galaxy-card:hover img{
+
+transform:scale(1.15);
+
+}
+.milky-way{
+
+    padding:120px 8%;
+
+}
+
+.milky-way h2{
+
+    text-align:center;
+
+    font-size:55px;
+
+    color:#4CAF50;
+
+    text-shadow:0 0 20px #4CAF50;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#d6e8ff;
+
+    margin-bottom:60px;
+
+    font-size:22px;
+
+}
+
+.milky-container{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:60px;
+
+}
+.milky-image{
+
+    flex:1;
+
+}
+
+.milky-image img{
+
+    width:100%;
+
+    border-radius:25px;
+
+    transition:.5s;
+
+    box-shadow:0 0 30px rgba(76,175,80,.35);
+
+max-width:650px;
+}
+
+.milky-image img:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 50px #4CAF50;
+
+}
+.milky-content{
+
+    flex:1;
+.reveal{
+opacity:0;
+transform:translateY(50px);
+transition:all .8s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.milky-content p{
+
+    line-height:1.9;
+
+    color:#d6e8ff;
+
+    margin-bottom:40px;
+
+}
+.milky-facts{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.fact{
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(76,175,80,.3);
+
+    border-radius:18px;
+
+    padding:25px;
+
+    text-align:center;
+
+    transition:.4s;
+
+}
+
+.fact:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 25px #4CAF50;
+
+}
+.next-destination{
+
+    padding:120px 8%;
+
+    text-align:center;
+
+}
+
+.next-destination h2{
+
+    font-size:55px;
+
+    color:#66ccff;
+
+    margin-bottom:25px;
+
+    text-shadow:0 0 20px #66ccff;
+
+}
+
+.next-destination p{
+    color:#d6e8ff;
+
+    max-width:700px;
+
+    margin:0 auto 40px;
+
+    line-height:1.8;
+}
+.next-card{
+
+    margin:60px auto;
+
+    width:420px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(102,204,255,.25);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    transition:.5s;
+
+    backdrop-filter:blur(10px);
+
+}
+
+.next-card:hover{
+
+    transform:translateY(-15px);
+
+    box-shadow:0 0 40px #66ccff;
+
+}
+.next-card img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+}
+footer{
+
+    padding:50px;
+
+    text-align:center;
+
+    background:#03050f;
+
+    border-top:1px solid rgba(102,204,255,.2);
+
+}
+
+footer h2{
+
+    color:#66ccff;
+
+    margin-bottom:20px;
+
+}
+
+footer p{
+
+    color:#d6e8ff;
+
+    margin:10px;
+
+}
+.next-card h3{
+
+    color:#66ccff;
+
+    font-size:30px;
+
+    margin:25px 0;
+
+}
+.next-card .btn{
+
+    margin-bottom:30px;
+
+}
+.fact h3{
+
+    color:#ffffff;
+
+    font-size:32px;
+
+    margin:15px 0 10px;
+
+}
+
+.fact p{
+
+    color:#d6e8ff;
+
+    font-size:17px;
+
+    margin:0;
+
+}
+</style>
+
+<body>
+<div class="stars">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<header>
+
+<nav>
+
+<div class="logo">
+
+🌌 Cosmic Universe
+
+</div>
+
+<ul>
+<li><a href="cosmic universe 3.0.html">Home</a></li>
+<li><a href="blackhole 2.0.html">Black Hole</a></li>
+<li><a href="galaxy 2.0.html"class="active">Galaxy</a></li>
+<li><a href="nebula 2.0.html">Nebula</a></li>
+<li><a href="space 2.0.html">Space</a></li>
+<li><a href="quasars 2.0.html">Quasar</a></li>
+<li><a href="Singularity 2.0.html">Singularity</a></li>
+</ul>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Galaxy</h1>
+<h2>Cosmic Islands of the universe</h2>
+<p>
+
+A galaxy is a magnificent collection of billions of stars,
+planets, gas, dust, and dark matter held together by gravity.
+
+Explore the beauty of the cosmic islands spread across our universe.
+
+</p>
+
+<a href="https://science.nasa.gov/universe/galaxies/" class="btn">
+
+Explore Galaxy
+
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEcJPpk0KjhfLS3yQJ7WgNirNocdDkThVNf_ToX2kihA&s=10" alt="Galaxy">
+
+</div>
+
+</section>
+<section class="about reveal" id="about">
+
+<h2>🌌 What is a Galaxy?</h2>
+
+<div class="about-container">
+
+<div class="about-image">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIJFrtfnaJs4Ax_iPgmhK5jTh2bf9EpLUbKE2OJjoQMA&s=10" alt="Galaxy">
+
+</div>
+
+<div class="about-content">
+
+<p>
+
+A galaxy is an enormous system of billions of stars,
+planets, gas, dust, and dark matter held together by gravity.
+Every galaxy has its own unique shape, size, and history.
+
+</p>
+
+<div class="feature-grid">
+
+<div class="feature">
+
+<h3>⭐ Billions of Stars</h3>
+
+<p>Most galaxies contain billions of stars.</p>
+
+</div>
+
+<div class="feature">
+
+<h3>🪐 Planetary Systems</h3>
+
+<p>Many stars are surrounded by planets.</p>
+
+</div>
+
+<div class="feature">
+
+<h3>🌀 Gravity Bound</h3>
+
+<p>Gravity keeps everything together.</p>
+
+</div>
+
+<div class="feature">
+
+<h3>💫 Supermassive Black Holes</h3>
+
+<p>Most galaxies contain one at their centre.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+<section class="types reveal">
+
+<h2>🌌 Types of Galaxies</h2>
+
+<div class="galaxy-container">
+
+<div class="galaxy-card spiral">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQuzXTKvUPcTtm6Sc15kczWkP2-cb22mt3_WsD1j6mWw&s=10" alt="Spiral Galaxy">
+
+<h3>🌌 Spiral Galaxy</h3>
+
+<p>
+Beautiful spiral arms filled with stars,
+gas and dust. Our Milky Way is a spiral galaxy.
+</p>
+
+</div>
+
+<div class="galaxy-card elliptical">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_aasX-CepO5rMRKb_ZopVMNIduorbW5wQXS8BePzf6w&s=10" alt="Elliptical Galaxy">
+
+<h3>⭐ Elliptical Galaxy</h3>
+
+<p>
+Smooth and rounded galaxies containing
+older stars with very little gas and dust.
+</p>
+
+</div>
+
+<div class="galaxy-card irregular">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFq0uvXS2wn0tZ2hCLzhpcairf4K_mjI8eavBiZy0sbA&s=10" alt="Irregular Galaxy">
+
+<h3>💫 Irregular Galaxy</h3>
+
+<p>
+Galaxies with no fixed shape,
+often formed by collisions.
+</p>
+
+</div>
+
+</div>
+
+</section>
+<section class="milky-way reveal">
+
+    <h2>🌍 The Milky Way</h2>
+
+    <p class="subtitle">
+        Our Home in the Universe
+    </p>
+
+    <div class="milky-container">
+
+        <div class="milky-image">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjVJQ_FbPOmNgot8dtK7TWyZCYQXySQAoC6nEQQK_U6A&s=10" alt="Milky Way">
+
+        </div>
+
+        <div class="milky-content">
+
+            <p>
+
+                The Milky Way is a barred spiral galaxy that contains
+                our Solar System. It stretches across the night sky
+                and is home to hundreds of billions of stars.
+
+            </p>
+
+            <div class="milky-facts">
+
+                <div class="fact">
+                    ⭐
+                    <h3>100–400 Billion</h3>
+                    <p>Stars</p>
+                </div>
+
+                <div class="fact">
+                    ☀️
+                    <h3>13.6 Billion</h3>
+                    <p>Years Old</p>
+                </div>
+
+                <div class="fact">
+                    🌍
+                    <h3>100,000</h3>
+                    <p>Light-years Wide</p>
+                </div>
+
+                <div class="fact">
+                    🕳
+                    <h3>Sagittarius A*</h3>
+                    <p>Galactic Centre</p>
+                </div>
+
+            </div>
+
+            <a href="https://en.wikipedia.org/wiki/Milky_Way" class="btn">Discover More</a>
+
+        </div>
+
+    </div>
+
+</section>
+    <section class="next-destination reveal">
+
+    <h2>🚀 Continue Your Cosmic Journey</h2>
+
+    <p>
+        The universe is filled with breathtaking mysteries waiting to be explored.
+        Your next destination is one of the most beautiful objects in space...
+    </p>
+
+    <div class="next-card">
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWEnlAF3LmsvYLsywjcKCdxmzK2b4cwQydACF1BhpBdw&s"alt="Nebula">
+
+        <h3>☁️ Nebula</h3>
+
+        <p>
+            Discover the colorful stellar nurseries where new stars are born.
+        </p>
+
+        <a href="nebula 2.0.html" class="btn">Explore Nebula →</a>
+
+    </div>
+
+</section>
+<footer>
+
+    <h2>🌌 Cosmic Universe</h2>
+
+    <p>
+        Exploring the beauty and mysteries of the universe,
+        one galaxy at a time.
+    </p>
+
+    <p>
+        Designed & Developed by JOYDEEP ❤️
+    </p>
+
+    <p>
+        © 2026 Cosmic Universe. All Rights Reserved.
+    </p>
+
+</footer>
+<script>
+const reveals=document.querySelectorAll('.reveal');
+
+function revealOnScroll(){
+
+reveals.forEach(element=>{
+
+const windowHeight=window.innerHeight;
+
+const revealTop=element.getBoundingClientRect().top;
+
+if(revealTop<windowHeight-100){
+
+element.classList.add('active');
+
+}
+
+});
+
+}
+
+window.addEventListener('scroll',revealOnScroll);
+
+revealOnScroll();
+</script>
+</body>
+</html>

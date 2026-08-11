@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Space | Cosmic Universe</title>
+
+</head>
+<style>
+    .explore-universe{
+
+padding:120px 8%;
+
+}
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.section-title h2{
+
+font-size:55px;
+
+color:#66CCFF;
+
+margin-bottom:15px;
+
+text-shadow:0 0 20px #66CCFF;
+
+}
+
+.section-title p{
+
+font-size:20px;
+
+color:#d6e8ff;
+
+}
+
+.universe-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:40px;
+
+}
+
+.universe-card{
+
+background:#171b29;
+
+border-radius:25px;
+
+overflow:hidden;
+
+transition:.45s;
+
+}
+
+.universe-card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+transition:.45s;
+
+}
+
+.card-content{
+
+padding:30px;
+
+}
+
+.card-content h3{
+
+font-size:34px;
+
+margin-bottom:20px;
+
+}
+
+.card-content p{
+
+font-size:19px;
+
+line-height:1.8;
+
+color:#d6e8ff;
+
+margin-bottom:30px;
+
+}
+
+.card-btn{
+
+display:inline-block;
+
+padding:14px 32px;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+color:white;
+
+background:linear-gradient(90deg,#66CCFF,#C770FF);
+
+transition:.4s;
+
+}
+
+.card-btn:hover{
+
+transform:translateX(8px);
+
+}
+
+.universe-card:hover{
+
+transform:translateY(-15px);
+
+}
+
+.universe-card:hover img{
+
+transform:scale(1.08);
+
+}
+
+.milky{
+
+border:2px solid #55C8FF;
+
+}
+
+.milky h3{
+
+color:#55C8FF;
+
+}
+
+.milky:hover{
+
+box-shadow:0 0 40px #55C8FF;
+
+}
+
+
+.voyager{
+
+border:2px solid #FFD54F;
+
+}
+
+.voyager h3{
+
+color:#FFD54F;
+
+}
+
+.voyager:hover{
+
+box-shadow:0 0 40px #FFD54F;
+
+}
+
+.sun{
+
+border:2px solid #FF9800;
+
+}
+
+.sun h3{
+
+color:#FF9800;
+
+}
+
+.sun:hover{
+
+box-shadow:0 0 40px #FF9800;
+
+}
+
+
+.mars{
+
+border:2px solid #FF5252;
+
+}
+
+.mars h3{
+
+color:#FF5252;
+
+}
+
+.mars:hover{
+
+box-shadow:0 0 40px #FF5252;
+
+}
+    .facts{
+
+padding:120px 8%;
+
+}
+.reveal{
+opacity:0;
+transform:translateY(50px);
+transition:all .8s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+.facts-container{
+
+margin-top:70px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:30px;
+
+}
+
+.fact-row{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:30px 40px;
+
+background:rgba(255,255,255,.05);
+
+border-left:6px solid #66CCFF;
+
+border-radius:18px;
+
+transition:.4s;
+
+backdrop-filter:blur(10px);
+
+}
+
+.fact-row:hover{
+
+transform:translateX(15px);
+
+box-shadow:0 0 35px #66CCFF;
+
+}
+
+.fact-row h3{
+
+font-size:28px;
+
+color:white;
+
+}
+
+.fact-row span{
+
+font-size:24px;
+
+font-weight:bold;
+
+color:#66CCFF;
+
+}
+    .sun h3{color:#FFD700;}
+.sun:hover{box-shadow:0 0 40px #FFD700;}
+
+.mercury h3{color:#C0C0C0;}
+.mercury:hover{box-shadow:0 0 40px #C0C0C0;}
+
+.venus h3{color:#FFA500;}
+.venus:hover{box-shadow:0 0 40px #FFA500;}
+
+.earth h3{color:#66CCFF;}
+.earth:hover{box-shadow:0 0 40px #66CCFF;}
+
+.mars h3{color:#FF4D4D;}
+.mars:hover{box-shadow:0 0 40px #FF4D4D;}
+
+.jupiter h3{color:#C68642;}
+.jupiter:hover{box-shadow:0 0 40px #C68642;}
+
+.saturn h3{color:#FFD166;}
+.saturn:hover{box-shadow:0 0 40px #FFD166;}
+
+.uranus h3{color:#7DF9FF;}
+.uranus:hover{box-shadow:0 0 40px #7DF9FF;}
+
+.neptune h3{color:#4169E1;}
+.neptune:hover{box-shadow:0 0 40px #4169E1;}
+    .solar-system{
+
+padding:120px 8%;
+
+}
+
+.planet-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:35px;
+
+margin-top:70px;
+
+}
+
+.planet-card{
+
+background:rgba(255,255,255,.05);
+
+border-radius:25px;
+
+overflow:hidden;
+
+backdrop-filter:blur(10px);
+
+transition:.5s;
+
+}
+
+.planet-card img{
+
+width:100%;
+
+height:240px;
+
+object-fit:cover;
+
+transition:.5s;
+
+}
+
+.planet-content{
+
+padding:30px;
+
+}
+
+.planet-content h3{
+
+font-size:32px;
+
+margin-bottom:20px;
+
+}
+
+.planet-content p{
+
+color:#d6e8ff;
+
+line-height:1.8;
+
+margin-bottom:15px;
+
+}
+
+.planet-content span{
+
+display:block;
+
+color:#ffffff;
+
+font-weight:bold;
+
+margin-bottom:25px;
+
+}
+
+.planet-btn{
+
+display:inline-block;
+
+padding:12px 28px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+background:linear-gradient(90deg,#66CCFF,#00E5FF);
+
+color:#000;
+
+font-weight:bold;
+
+transition:.4s;
+
+}
+
+.planet-btn:hover{
+
+transform:translateX(8px);
+
+}
+
+.planet-card:hover{
+
+transform:translateY(-15px);
+
+}
+
+.planet-card:hover img{
+
+transform:scale(1.08);
+
+}
+    .vacuum h4{
+
+color:#66CCFF;
+
+}
+
+.vacuum:hover{
+
+box-shadow:0 0 35px #66CCFF;
+
+}
+
+.gravity h4{
+
+color:#7CFFCB;
+
+}
+
+.gravity:hover{
+
+box-shadow:0 0 35px #7CFFCB;
+
+}
+
+.speed h4{
+
+color:#FFD166;
+
+}
+
+.speed:hover{
+
+box-shadow:0 0 35px #FFD166;
+
+}
+
+.infinite h4{
+
+color:#B26CFF;
+
+}
+
+.infinite:hover{
+
+box-shadow:0 0 35px #B26CFF;
+
+}
+    .fact-card{
+
+background:rgba(255,255,255,.05);
+
+padding:25px;
+
+border-radius:20px;
+
+backdrop-filter:blur(10px);
+
+transition:.4s;
+
+}
+
+.fact-card h4{
+
+font-size:28px;
+
+margin-bottom:15px;
+
+}
+
+.fact-card p{
+
+font-size:16px;
+
+line-height:1.8;
+
+}
+    .facts-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:25px;
+
+margin-top:45px;
+
+}
+    .about-content{
+
+flex:1;
+
+}
+
+.about-content h3{
+
+font-size:42px;
+
+color:#66CCFF;
+
+margin-bottom:25px;
+
+}
+
+.about-content p{
+
+font-size:18px;
+
+line-height:2;
+
+color:#d6e8ff;
+
+}
+    .about-image{
+
+flex:1;
+
+}
+
+.about-image img{
+
+width:100%;
+
+max-width:600px;
+
+border-radius:25px;
+
+box-shadow:0 0 45px rgba(102,204,255,.35);
+
+transition:.5s;
+
+}
+
+.about-image img:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 80px #66CCFF;
+
+}
+    .about-container{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:70px;
+
+flex-wrap:wrap;
+
+}
+    .about{
+
+padding:120px 8%;
+
+}
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.section-title h2{
+
+font-size:55px;
+
+color:#66CCFF;
+
+text-shadow:0 0 25px #66CCFF;
+
+}
+
+.section-title p{
+
+font-size:20px;
+
+color:#d6e8ff;
+
+margin-top:20px;
+
+}
+    .btn{
+
+display:inline-block;
+
+padding:16px 40px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+background:linear-gradient(90deg,#66CCFF,#00E5FF);
+
+color:#02050f;
+
+font-weight:bold;
+
+transition:.4s;
+
+box-shadow:0 0 25px rgba(102,204,255,.4);
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 0 40px #66CCFF;
+
+}
+    .hero-image{
+
+flex:1;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.hero-image img{
+
+width:100%;
+
+max-width:560px;
+
+border-radius:30px;
+
+box-shadow:0 0 60px rgba(102,204,255,.45);
+
+transition:.5s;
+
+}
+
+.hero-image img:hover{
+
+transform:scale(1.06);
+
+box-shadow:0 0 90px #66CCFF;
+
+}
+    .hero{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:120px 8%;
+
+gap:70px;
+
+min-height:90vh;
+
+}
+
+.hero-content{
+
+flex:1;
+
+}
+
+.hero-content h1{
+
+font-size:100px;
+
+color:#66CCFF;
+
+text-shadow:
+0 0 20px #66CCFF,
+0 0 40px #66CCFF,
+0 0 80px rgba(102,204,255,.5);
+
+margin-bottom:20px;
+
+}
+
+.hero-content h2{
+
+font-size:40px;
+
+color:cyan;
+
+margin-bottom:25px;
+
+}
+
+.hero-content p{
+
+font-size:20px;
+
+line-height :2.1;
+
+color:#d6e8ff;
+
+margin-bottom:40px;
+
+}
+    nav{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:20px 8%;
+
+}
+
+.logo{
+
+font-size:30px;
+
+font-weight:bold;
+
+color:#66CCFF;
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:30px;
+
+list-style:none;
+
+}
+
+nav ul a{
+
+color:white;
+
+text-decoration:none;
+
+transition:.4s;
+
+}
+
+nav ul a:hover,
+nav ul a.active{
+
+color:#66CCFF;
+
+text-shadow:0 0 20px #66CCFF;
+
+}
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+margin:0;
+
+font-family:Arial,Helvetica,sans-serif;
+
+background:#02050f;
+
+color:white;
+
+overflow-x:hidden;
+
+}
+    .missions{
+
+padding:120px 8%;
+
+}
+
+.mission-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+
+gap:40px;
+
+margin-top:70px;
+
+}
+.mission-card{
+
+background:rgba(255,255,255,.05);
+
+border-radius:25px;
+
+overflow:hidden;
+
+transition:.5s;
+
+backdrop-filter:blur(10px);
+
+}
+
+.mission-card img{
+
+width:100%;
+
+height:240px;
+
+object-fit:cover;
+
+transition:.5s;
+
+}
+
+.mission-content{
+
+padding:30px;
+
+}
+
+.mission-content h3{
+
+font-size:30px;
+
+margin-bottom:20px;
+
+}
+
+.mission-content p{
+
+line-height:1.8;
+
+color:#d6e8ff;
+
+margin-bottom:20px;
+
+}
+
+.mission-content span{
+
+display:inline-block;
+
+padding:8px 18px;
+
+border-radius:30px;
+
+background:#66CCFF;
+
+color:#02050f;
+
+font-weight:bold;
+
+}
+
+.mission-card:hover{
+
+transform:translateY(-15px);
+
+}
+
+.mission-card:hover img{
+
+transform:scale(1.08);
+
+}
+.apollo h3{
+color:#FFD166;
+}
+
+.apollo:hover{
+box-shadow:0 0 40px #FFD166;
+}
+
+.hubble h3{
+color:#66CCFF;
+}
+
+.hubble:hover{
+box-shadow:0 0 40px #66CCFF;
+}
+
+.voyager h3{
+color:#7CFFCB;
+}
+
+.voyager:hover{
+box-shadow:0 0 40px #7CFFCB;
+}
+
+.webb h3{
+color:#B26CFF;
+}
+
+.webb:hover{
+box-shadow:0 0 40px #B26CFF;
+}
+.footer-logo h2:hover{
+
+    color:white;
+
+    text-shadow:
+    0 0 15px #66CCFF,
+    0 0 35px #66CCFF,
+    0 0 70px #66CCFF;
+
+    transition:.4s;
+
+}
+.footer{
+
+    margin-top:120px;
+
+    padding:70px 8%;
+
+    background:#0b1020;
+
+    border-top:2px solid rgba(102,204,255,.25);
+
+}
+
+.footer-content{
+
+    text-align:center;
+
+}
+
+.footer-logo h2{
+
+    font-size:42px;
+
+    color:#66CCFF;
+
+    margin-bottom:12px;
+
+    text-shadow:0 0 20px #66CCFF;
+
+}
+
+.footer-logo p{
+
+    font-size:20px;
+
+    color:#d6e8ff;
+
+    letter-spacing:2px;
+
+    margin-bottom:45px;
+
+}
+
+.footer-quote{
+
+    margin-bottom:45px;
+
+}
+
+.footer-quote h3{
+
+    font-size:28px;
+
+    color:#ffffff;
+
+    font-style:italic;
+
+    margin-bottom:10px;
+
+}
+
+.footer-quote p{
+
+    color:#66CCFF;
+
+    font-size:18px;
+
+}
+
+.footer-info{
+
+    border-top:1px solid rgba(255,255,255,.12);
+
+    padding-top:30px;
+
+}
+
+.footer-info p{
+
+    color:#b8cbe4;
+
+    font-size:17px;
+
+    margin:8px 0;
+
+}
+</style>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">
+
+🌌 Cosmic Universe
+
+</div>
+
+<ul>
+<li><a href="cosmic universe 3.0.html">Home</a></li>
+<li><a href="blackhole 2.0.html">Black Hole</a></li>
+<li><a href="galaxy 2.0.html">Galaxy</a></li>
+<li><a href="nebula 2.0.html">Nebula</a></li>
+<li><a href="space 2.0.html"class="active">Space</a></li>
+<li><a href="quasars 2.0.html">Quasar</a></li>
+<li><a href="Singularity 2.0.html">Singularity</a></li>
+</ul>
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Space</h1>
+
+<h2>🚀 Explore the Infinite Universe</h2>
+
+<p>
+
+Space is an endless ocean filled with stars,
+galaxies, planets and mysteries waiting to be discovered.
+Every journey into space begins with curiosity.
+
+</p>
+
+<a href="cosmic universe 3.0.html" class="btn">
+
+Begin Exploration
+
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGeI1LP9a--aLkkp6J7rJ713ipBdhcf6f8ONgADX8UQA&s=10" alt="Space">
+
+</div>
+
+</section>
+<section class="about reveal" id="about">
+
+<div class="section-title">
+
+<h2>🌍 What is Space?</h2>
+
+<p>
+Beyond our atmosphere lies an endless universe filled with mysteries,
+galaxies, stars, planets and breathtaking cosmic phenomena.
+</p>
+
+</div>
+
+<div class="about-container">
+
+<div class="about-image">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb-09w9rqT6f2CGifc0E_9jHzvaUc_chD2Ly6rXzFfew&s=10" alt="Earth">
+
+</div>
+
+<div class="about-content">
+
+<h3>The Infinite Cosmos</h3>
+
+<p>
+
+Space begins just above Earth's atmosphere and stretches endlessly
+across billions of light-years. It contains everything from tiny
+asteroids to enormous galaxies and mysterious black holes.
+
+</p>
+
+<div class="facts-grid">
+
+<div class="fact-card vacuum">
+
+<h4>🌌 Vacuum</h4>
+
+<p>
+Space has almost no air, making it a near-perfect vacuum.
+</p>
+
+</div>
+
+<div class="fact-card gravity">
+
+<h4>🛰️ Microgravity</h4>
+
+<p>
+Astronauts float because objects are constantly falling around Earth.
+</p>
+
+</div>
+
+<div class="fact-card speed">
+
+<h4>⚡ Light Speed</h4>
+
+<p>
+Light travels nearly 300,000 km every second.
+</p>
+
+</div>
+
+<div class="fact-card infinite">
+
+<h4>♾️ Endless</h4>
+
+<p>
+Scientists still don't know where the universe truly ends.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+   <div class="section-title">
+
+        <h2>🪐 Our Solar System</h2>
+
+        <p>
+            Explore the incredible planets that orbit our Sun.
+        </p>
+
+    </div>
+
+    <div class="planet-grid">
+
+        <div class="planet-card sun">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf7uoCS8KXJNa5PfIxNASAcu9dm2-ZERNrOrLQNM_0vQ&s=10" alt="Sun">
+
+            <div class="planet-content">
+                <h3>☀ Sun</h3>
+                <p>The giant star at the center of our Solar System.</p>
+                <span>Diameter: 1.39 Million km</span>
+                <a href="https://science.nasa.gov/sun/" class="planet-btn">Learn More →</a>
+            </div>
+        </div>
+
+        <div class="planet-card mercury">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7VznA3sziDsbFAeExKhIhfIjSHexkZUSFsccAqSH7BQ&s=10" alt="Mercury">
+
+            <div class="planet-content">
+                <h3>☿ Mercury</h3>
+                <p>The closest planet to the Sun.</p>
+                <span>Year: 88 Days</span>
+                <a href="https://science.nasa.gov/mercury/" class="planet-btn">Learn More →</a>
+            </div>
+        </div>
+
+        <div class="planet-card venus">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj5K4EThtZDZBXQf577appInRm753w_5EAVzJzYuYtSw&s=10" alt="Venus">
+
+            <div class="planet-content">
+                <h3>♀ Venus</h3>
+                <p>The hottest planet in our Solar System.</p>
+                <span>Surface: 465°C</span>
+                <a href="https://science.nasa.gov/venus/" class="planet-btn">Learn More →</a>
+            </div>
+        </div>
+
+        <div class="planet-card earth">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKkBAclYPsKCUpxl4yG34zHX3sUMUqKdgbtySb8DmslA&s=10" alt="Earth">
+
+            <div class="planet-content">
+                <h3>🌍 Earth</h3>
+                <p>The only known planet with life.</p>
+                <span>Life Supporting</span>
+                <a href="https://science.nasa.gov/earth/facts/" class="planet-btn">Learn More →</a>
+            </div>
+        </div>
+
+        <div class="planet-card mars">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG1ZbCg1BgQgbgzifGJY7c3DD5eWswqPGvrTWX_Qt9gw&s=10" alt="Mars">
+
+            <div class="planet-content">
+                <h3>♂ Mars</h3>
+                <p>The famous Red Planet.</p>
+                <span>2 Moons</span>
+                <a href="https://science.nasa.gov/mars/" class="planet-btn">Learn More →</a>
+            </div>
+        </div>
+
+        <div class="planet-card jupiter">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx1abDlNMHpapzn-ovITrS6hWhpY6Sf0YKxZjMRFoCRA&s=10" alt="Jupiter">
+
+            <div class="planet-content">
+                <h3>♃ Jupiter</h3>
+                <p>The biggest planet in the Solar System.</p>
+                <span>95 Moons</span>
+                <a href="https://science.nasa.gov/jupiter/" class="planet-btn">Learn More →</a>
+            </div>
+        </div>
+
+        <div class="planet-card saturn">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS58XNI12dKLGP24R2D2qubB4kAMOUM7qAFQ4ZX7zgMvA&s=10" alt="Saturn">
+
+            <div class="planet-content">
+                <h3>🪐 Saturn</h3>
+                <p>Known for its magnificent rings.</p>
+                <span>146 Moons</span>
+                <a href="https://science.nasa.gov/saturn/" class="planet-btn">Learn More →</a>
+            </div>
+        </div>
+
+        <div class="planet-card uranus">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnWVTPvdkGZy5R5NVA-RBX4nqWCxqnCJpbgVM4aYbiew&s=10" alt="Uranus">
+
+            <div class="planet-content">
+                <h3>♅ Uranus</h3>
+                <p>An icy giant tilted on its side.</p>
+                <span>-224°C</span>
+                <a href="https://science.nasa.gov/uranus/" class="planet-btn">Learn More →</a>
+            </div>
+        </div>
+
+        <div class="planet-card neptune">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTddxB60jOIiMdakBqxfgwFt_TIJTl3sBxC5K1x_S8k6g&s=10" alt="Neptune">
+
+            <div class="planet-content">
+                <h3>♆ Neptune</h3>
+                <p>The windiest planet in our Solar System.</p>
+                <span>2,100 km/h Winds</span>
+                <a href="https://science.nasa.gov/neptune/" class="planet-btn">Learn More →</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<section class="missions reveal">
+
+    <div class="section-title">
+
+        <h2>🚀 Legendary Space Missions</h2>
+
+        <p>
+            Humanity's greatest achievements in exploring the universe.
+        </p>
+
+    </div>
+
+    <div class="mission-container">
+
+        
+
+        <div class="mission-card apollo">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6Mj5X01NvSIMmDuTPbRArbwuIV9NsVMmQcWbYT1rzMw&s=10" alt="Apollo 11">
+
+            <div class="mission-content">
+
+                <h3>🌕 Apollo 11</h3>
+
+                <p>
+
+                    The first successful mission to land humans
+                    on the Moon in 1969.
+
+                </p>
+
+                <span>1969</span>
+
+            </div>
+
+        </div>
+
+       
+
+        <div class="mission-card hubble">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLUuW8xRoUkLM6RP0iRsG3Ram3vGdg0AsUpZhbqZhJ0g&s=10" alt="Hubble">
+
+            <div class="mission-content">
+
+                <h3>🔭 Hubble Telescope</h3>
+
+                <p>
+
+                    Revolutionized astronomy by capturing
+                    breathtaking images of the universe.
+
+                </p>
+
+                <span>1990</span>
+
+            </div>
+
+        </div>
+
+       
+
+        <div class="mission-card voyager">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJr4w43K7-ROz7LFyNQcJWQx2HV-_oHwmARsMUPxeUXg&s=10" alt="Voyager">
+
+            <div class="mission-content">
+
+                <h3>🛰️ Voyager 1</h3>
+
+                <p>
+
+                    The farthest human-made object ever launched.
+
+                </p>
+
+                <span>1977</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="mission-card webb">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWJaur2XfFnOw8N1XEEIHFrybCqe51R6R8YoT7Kpgniw&s=10" alt="James Webb">
+
+            <div class="mission-content">
+
+                <h3>✨ James Webb</h3>
+
+                <p>
+
+                    The world's most powerful space telescope.
+
+                </p>
+
+                <span>2021</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+</div>
+<section class="explore-universe reveal">
+
+    <div class="section-title">
+
+        <h2>🌌 Explore the Universe</h2>
+
+        <p>Discover some of the most fascinating wonders beyond Earth.</p>
+
+    </div>
+
+    <div class="universe-grid">
+
+      
+        <div class="universe-card milky">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhwuztPDq261sTOcXYqpuiO2b59O7XdZTxwqcJHkV6_A&s=10">
+
+            <div class="card-content">
+
+                <h3>🌌 Milky Way</h3>
+
+                <p>Our home galaxy contains between 100 and 400 billion stars.</p>
+
+                <a href="https://science.nasa.gov/resource/the-milky-way-galaxy/" class="card-btn">Explore →</a>
+
+            </div>
+
+        </div>
+
+       
+
+        <div class="universe-card voyager">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJr4w43K7-ROz7LFyNQcJWQx2HV-_oHwmARsMUPxeUXg&s=10">
+
+            <div class="card-content">
+
+                <h3>🛰 Voyager 1</h3>
+
+                <p>The farthest human-made object, still travelling through interstellar space.</p>
+
+                <a href="https://science.nasa.gov/mission/voyager/" class="card-btn">Explore →</a>
+
+            </div>
+
+        </div>
+
+       
+
+        <div class="universe-card sun">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf7uoCS8KXJNa5PfIxNASAcu9dm2-ZERNrOrLQNM_0vQ&s=10">
+
+            <div class="card-content">
+
+                <h3>☀ The Sun</h3>
+
+                <p>The massive star that powers every planet in our Solar System.</p>
+
+                <a href="https://science.nasa.gov/sun/" class="card-btn">Explore →</a>
+
+            </div>
+
+        </div>
+
+     
+
+        <div class="universe-card mars">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpoe9ATNnYYvz284BQaZqOoMpfLYlrHeST1PtuU_YqQw&s=10">
+
+            <div class="card-content">
+
+                <h3>🔴 Mars</h3>
+
+                <p>The Red Planet is humanity's most promising destination for future exploration.</p>
+
+                <a href="https://science.nasa.gov/planetary-science/programs/mars-exploration/" class="card-btn">Explore →</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-logo">
+
+            <h2>🌌 Cosmic Universe</h2>
+
+            <p>
+                Explore • Discover • Inspire
+            </p>
+
+        </div>
+
+        <div class="footer-quote">
+
+            <h3>"Somewhere, something incredible is waiting to be known."</h3>
+
+            <p>— Carl Sagan</p>
+
+        </div>
+
+        <div class="footer-info">
+
+            <p>Made with ❤️ by Joydeep</p>
+
+            <p>© 2026 Cosmic Universe. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+const reveals=document.querySelectorAll('.reveal');
+
+function revealOnScroll(){
+
+reveals.forEach(element=>{
+
+const windowHeight=window.innerHeight;
+
+const revealTop=element.getBoundingClientRect().top;
+
+if(revealTop<windowHeight-100){
+
+element.classList.add('active');
+
+}
+
+});
+
+}
+
+window.addEventListener('scroll',revealOnScroll);
+
+revealOnScroll();
+</script>
+</body>
+</html>

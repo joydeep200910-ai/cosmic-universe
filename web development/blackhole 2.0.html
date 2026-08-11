@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Hole | Cosmic Universe</title>
+
+</head>
+<style>
+    .anatomy{
+    padding:100px 8%;
+}
+
+.anatomy h2{
+    text-align:center;
+    color:#00ffff;
+    font-size:48px;
+    margin-bottom:60px;
+}
+
+.anatomy-container{
+    display:flex;
+    align-items:center;
+    gap:60px;
+}
+
+.anatomy-image{
+    flex:1;
+}
+
+.anatomy-image img{
+    width:100%;
+    border-radius:20px;
+    transition:.4s;
+}
+
+.anatomy-image img:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 35px cyan;
+}
+
+.anatomy-info{
+    flex:1;
+}
+
+.part{
+    margin-bottom:30px;
+    padding:20px;
+    border-left:4px solid cyan;
+    background:rgba(255,255,255,.05);
+    border-radius:12px;
+}
+
+.part h3{
+    color:#00ffff;
+    margin-bottom:10px;
+}
+  .facts{
+
+    padding:100px 8%;
+
+}
+
+.facts h2{
+
+    text-align:center;
+
+    font-size:48px;
+
+    color:#00ffff;
+
+    margin-bottom:60px;
+
+}
+
+.facts-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.fact-card{
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(0,255,255,.3);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    transition:.4s;
+
+    backdrop-filter:blur(10px);
+
+}
+.reveal{
+opacity:0;
+transform:translateY(50px);
+transition:all .8s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+.fact-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 0 30px cyan;
+     letter-spacing:2px;
+}
+
+.fact-card h3{
+
+    color:#00ffff;
+
+    margin-bottom:20px;
+
+    font-size:24px;
+
+}
+
+.fact-card p{
+
+    color:white;
+
+    line-height:1.8;
+
+}
+    .event-horizon{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:60px;
+
+    padding:100px 8%;
+
+}
+
+.event-image{
+
+    flex:1;
+
+}
+
+.event-image img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    box-shadow:0 0 25px rgba(0,255,255,.35);
+
+    transition:.4s;
+
+}
+
+.event-image img:hover{
+
+    transform:scale(1.05);
+
+}
+
+.event-content{
+
+    flex:1;
+
+}
+.event-horizon:hover img{
+
+    box-shadow:0 0 45px cyan;
+
+}
+.event-content h2{
+
+    color:#00ffff;
+
+    font-size:48px;
+
+    margin-bottom:25px;
+
+}
+
+.event-content p{
+
+    color:white;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+    margin-bottom:20px;
+
+}
+    .icon{
+
+    font-size:45px;
+
+    margin-bottom:20px;
+
+}
+    .container{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+    margin-top:50px;
+}
+    .card{
+    background: rgba(255,255,255,.08);
+
+    border:1px solid rgba(0,255,255,.25);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    transition:.4s;
+
+    min-height:280px;
+
+    cursor:pointer;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 0 20px rgba(0,255,255,.15);
+
+padding:35px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:space-between;
+
+text-align:center;}
+.card:hover{
+
+    transform:translateY(-12px) scale(1.03);
+
+    box-shadow:0 0 35px cyan;
+
+    border-color:cyan;
+
+}
+.card h3{
+
+    color:#00ffff;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
+.card h1{ color:#00ffff;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+}
+.card h2{ color:#00ffff;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+}
+    .btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 35px;
+    background:#00ffff;
+    color:#050816;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.3s;
+}
+.card p{
+
+    color:#e5e7eb;
+
+    line-height:1.8;
+
+    font-size:17px;}
+
+.about p{margin-bottom:40px;
+     color:#00ffff;
+    text-shadow:0 0 20px cyan;
+    font-size:20px;}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 25px cyan;
+}
+    .hero-image img{
+    width:100%;
+    max-width:550px;
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(0,255,255,.3);
+}
+    a{
+    color:#00ffff;
+}
+    p{
+    color:white;
+}
+    h1,h2,h3{
+    color:#00ffff;
+}
+    .logo{font-size:30px;
+
+font-weight:bold;
+
+color:#00ffff;
+text-shadow:0 0 15px cyan}
+    body{
+    background-color:black;
+}
+    .hero-content{
+    flex:1;
+}
+
+.hero-content h1{
+    font-size:70px;
+    margin-bottom:20px;
+    color:#00ffff;
+    text-shadow:0 0 20px cyan;}
+
+.hero-content p{
+    margin-bottom:40px;
+     color:#00ffff;
+    text-shadow:0 0 20px cyan;}
+
+    .hero-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+    nav a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00ffff;
+}
+    nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+    nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+   
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:90vh;
+    padding:0 8%;
+    gap:60px;
+}
+.stars{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.stars span{
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px cyan;
+    animation: twinkle 4s infinite;
+}
+
+.stars span:nth-child(1){top:10%; left:15%;}
+.stars span:nth-child(2){top:25%; left:70%;}
+.stars span:nth-child(3){top:45%; left:35%;}
+.stars span:nth-child(4){top:65%; left:85%;}
+.stars span:nth-child(5){top:80%; left:20%;}
+.stars span:nth-child(6){top:55%; left:55%;}
+.stars span:nth-child(7){top:15%; left:90%;}
+.stars span:nth-child(8){top:90%; left:60%;}
+
+@keyframes twinkle{
+
+0%,100%{
+    opacity:.2;
+    transform:scale(1);
+}
+
+50%{
+    opacity:1;
+    transform:scale(2);
+}
+
+}
+</style>
+<body>
+<div class="stars">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<header>
+
+    <nav>
+
+        <div class="logo">
+            🌌 Cosmic Universe
+        </div>
+<ul>
+<li><a href="cosmic universe 3.0.html">Home</a></li>
+<li><a href="blackhole 2.0.html"class="active">Black Hole</a></li>
+<li><a href="galaxy 2.0.html">Galaxy</a></li>
+<li><a href="nebula 2.0.html">Nebula</a></li>
+<li><a href="space 2.0.html">Space</a></li>
+<li><a href="quasars 2.0.html">Quasar</a></li>
+<li><a href="Singularity 2.0.html">Singularity</a></li>
+</ul>
+</nav>
+
+</header>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>🕳 Black Hole</h1>
+
+        <p>
+           The strongest object in the universe
+        </p>
+
+        <a href="https://science.nasa.gov/universe/black-holes/" class="btn">
+            Learn More
+        </a>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThFUFgP-fAYZddyJTfGXLB1Cb3_j_Z3Pvq3mmMsn7cAw&s=10" alt="Black Hole">
+
+    </div>
+
+</section>
+
+
+
+<section class="about reveal">
+    <h2>What is a Black Hole?</h2>
+<div>
+         <p>  🌌 TYPES OF BLACK HOLE</p>
+        </div>
+
+        <div class="icon"⭐>
+            <h3>🌠 Intermediate</h3>
+            <p>Larger than stellar black holes but smaller than supermassive ones.</p>
+        </div>
+
+        <div  class="icon"⭐>
+            <h3>🌌 Supermassive</h3>
+            <p>Found at the centre of most galaxies and can contain millions of solar masses.</p>
+        </div>
+
+        <div  class="icon"⭐>
+            <h3>✨ Primordial</h3>
+            <p>A theoretical type of black hole thought to have formed shortly after the Big Bang.</p>
+        </div>
+
+    </div>
+
+</section>
+<section class="event-horizon reveal">
+
+    <div class="event-image">
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKdoEeIFf_i5JYMiNLcPMNUHb1fRbIZ6FQteoMjdPsVA&s=10" alt="Event Horizon">
+
+    </div>
+
+    <div class="event-content">
+
+        <h2>🌀 Event Horizon</h2>
+
+        <p>
+            The event horizon is the invisible boundary around a black hole.
+            Once anything crosses this boundary, it cannot escape—not even light.
+        </p>
+
+        <p>
+            It marks the point of no return, where gravity becomes so powerful
+            that escape is impossible.
+        </p>
+
+    </div>
+
+</section>
+<section class="facts reveal">
+
+    <h2>Amazing Facts</h2>
+
+    <div class="facts-container">
+
+        <div class="fact-card">
+            <h3>🕳 Light Cannot Escape</h3>
+            <p>
+                The gravity of a black hole is so strong that even light cannot escape once it crosses the event horizon.
+            </p>
+        </div>
+
+        <div class="fact-card">
+            <h3>⏳ Time Slows Down</h3>
+            <p>
+                According to Einstein's theory of relativity, time moves slower near a black hole.
+            </p>
+        </div>
+
+        <div class="fact-card">
+            <h3>🌌 Sagittarius A*</h3>
+            <p>
+                A supermassive black hole called Sagittarius A* lies at the centre of our Milky Way galaxy.
+            </p>
+        </div>
+
+        <div class="fact-card">
+            <h3>☀️ Giant Monsters</h3>
+            <p>
+                Some black holes contain billions of times the mass of our Sun.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+  <div class="part reveal">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR67c34AWKFFpL4qUiyEMBSLfwzL1yrBRKYZfXRB3x5gg&s=10"alt="ANATOMY">
+                <h3>💫 Accretion Disk</h3>
+                <p>Hot gas and dust spinning rapidly around the black hole.</p>
+            </div>
+
+            <div class="part">
+                <h3>🌀 Event Horizon</h3>
+                <p>The point of no return where nothing can escape.</p>
+            </div>
+
+            <div class="part">
+                <h3>⚫ Singularity</h3>
+                <p>The centre where matter is compressed to an extremely dense state.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <h3>🌌 Cosmic Universe</h3>
+
+    <p>
+        Explore the mysteries beyond the stars.
+    </p>
+
+    <p>
+        © 2026 Cosmic Universe | Built with HTML & CSS
+    </p>
+
+</footer>
+<script>
+const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+    reveals.forEach((element) => {
+        const windowHeight = window.innerHeight;
+        const revealTop = element.getBoundingClientRect().top;
+        const revealPoint = 120;
+
+        if (revealTop < windowHeight - revealPoint) {
+            element.classList.add('active');
+        } else {
+            element.classList.remove('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+</script>
+</body>
+</html>

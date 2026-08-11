@@ -1,0 +1,486 @@
+<!doctype heml>
+<html>
+   
+<head>
+
+    <title>Gravitational Singularity</title>
+
+    <style>
+        footer{
+
+margin-top:120px;
+
+padding:50px;
+
+background:black;
+
+text-align:center;
+
+border-top:2px solid cyan;
+
+}
+
+footer h2{
+
+color:#00ffff;
+
+}
+
+footer p{
+
+color:#cccccc;
+
+}
+        .timeline{
+
+margin:100px auto;
+
+text-align:center;
+
+}
+
+.timeline h2{
+
+color:#00ffff;
+
+font-size:42px;
+
+margin-bottom:50px;
+
+}
+
+.line{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:20px;
+
+}
+
+.step{
+
+padding:18px 25px;
+
+border-radius:30px;
+
+background:#111;
+
+box-shadow:0 0 15px cyan;
+
+transition:.4s;
+
+}
+
+.step:hover{
+
+transform:scale(1.1);
+
+background:#00bcd4;
+
+color:black;
+
+font-weight:bold;
+
+}
+        .facts{
+
+margin:100px 50px;
+
+text-align:center;
+
+}
+
+.facts h2{
+
+font-size:45px;
+
+color:#00ffff;
+
+text-shadow:0 0 20px cyan;
+
+margin-bottom:50px;
+
+}
+
+.fact-box{
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+flex-wrap:wrap;
+
+}
+
+.fact{
+
+width:280px;
+
+padding:25px;
+
+background:rgba(255,255,255,0.07);
+
+border-radius:18px;
+
+box-shadow:0 0 18px cyan;
+
+transition:.4s;
+
+}
+
+.fact:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 35px cyan;
+
+}
+        nav{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:18px 60px;
+
+    background:rgba(0,0,0,0.65);
+
+    backdrop-filter:blur(10px);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    z-index:1000;
+
+    box-sizing:border-box;
+
+}
+
+.logo{
+
+    color:#00ffff;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    text-shadow:0 0 15px cyan;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+nav ul li a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:18px;
+
+    transition:0.3s;
+
+}
+
+nav ul li a:hover{
+
+    color:#00ffff;
+
+    text-shadow:0 0 15px cyan;
+
+}
+
+        .cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin:80px 40px;
+}
+
+.card{
+    width:300px;
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.08);
+    box-shadow:0 0 20px rgba(0,255,255,0.4);
+    transition:0.4s;
+    text-align:center;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 0 35px cyan;
+}
+
+.card h2{
+    color:#00ffff;
+}
+
+.card p{
+    line-height:1.7;
+    color:#dddddd;
+}
+        body{margin:0
+            padding:80px 0 0 0;
+            font-family:arial,sans-serif;
+            color:white;
+background:linear-gradient(270deg,#000000,#120A3D,#240046,#000000);
+background-size:400% 400%;
+animation:spacemove 12s ease infinite;}
+@keyframes spaceMove{
+
+    0%{
+        background-position:left;
+    }
+
+    50%{
+        background-position:right;
+    }
+
+    100%{
+        background-position:left;
+    }
+
+}
+.hero{text-align:center;
+padding:80px 10%;}
+h1{font-size:70px;
+color:#00ffff;
+text-shadow: 0 0 20px cyan;
+animation:glow 2s ease-in-out infinite alternate;}
+.subtitle{font-size:28px;
+color:#00ffff;
+text-shadow:0 0 20px cyan;
+margin-top:-20px;}
+.buttons{margin-top:40px;}
+button{padding:15px 35px;
+margin:10px;
+font-size:18px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+transition:0.4s;
+background:#00d9ff;
+color:black;
+font-weight:bold;}
+button:hover{transform:scale(1.1);
+box-shadow:0 0 20px cyan;
+background:white;
+transform:scale(1.1);}
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px cyan;
+    }
+
+    to{
+        text-shadow:0 0 40px cyan,
+                    0 0 60px blue;
+    }
+}
+.image-section{
+    text-align:center;
+    margin-top:80px;
+}
+
+.image-section img{
+    width:600px;
+    max-width:90%;
+    border-radius:20px;
+    box-shadow:0 0 25px cyan;
+    transition:0.5s ease;
+    animation:float 4s ease-in-out infinite;
+}
+
+.image-section img:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 60px cyan;}
+    @keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+.intro{width:70%;
+margin:auto;
+line-height:1.8;}
+</style>
+
+</head>
+
+<body>
+    <nav>
+
+    <div class="logo">
+        🌌 COSMIC
+    </div>
+
+    <ul>
+
+        <li><a href="#">Home</a></li>
+
+        <li><a href="#">About</a></li>
+
+        <li><a href="#">Black Hole</a></li>
+
+        <li><a href="#">Gallery</a></li>
+
+        <li><a href="#">Contact</a></li>
+
+    </ul>
+
+</nav>
+    <div class="hero">
+        <h1>Gravitational Singularity</h1>
+        <p class="subtitle">
+    Where space,time and physics reaach their limits</p>
+    <p class="intro">
+        A gravitational singularity is a theoretical point in spacetime
+         where matter is crushed to an infinite density and zero volume
+         causing gravity and spacetime curvature to become infinite.</p>
+         <button>Explore</button>
+         <button>Learn More</button>
+    </div>        
+<div class="image-section">
+    <img src="singularity.jfif"
+    alt="Black Hole">
+</div>
+<section class="cards">
+
+    <div class="card">
+        <h2>🕳️ What is a Singularity?</h2>
+        <p>
+            A singularity is a region where spacetime becomes so extremely curved that our present theories can no longer accurately predict physical behavior.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>🌌 Black Hole Centre</h2>
+        <p>
+            In classical General Relativity, a singularity is predicted to exist at the center of a black hole, hidden behind the event horizon.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>⚛️ Quantum Gravity</h2>
+        <p>
+            Scientists believe a future theory of quantum gravity may explain what truly happens instead of an actual infinite-density point.
+        </p>
+    </div>
+
+</section>
+<section class="facts">
+
+<h2>🌌 Amazing Facts</h2>
+
+<div class="fact-box">
+
+<div class="fact">
+<h3>🕳️ Event Horizon</h3>
+
+<p>
+The event horizon is the boundary around a black hole. Once anything crosses it, not even light can escape.
+</p>
+
+</div>
+
+<div class="fact">
+
+<h3>⚛️ Mystery</h3>
+
+<p>
+Scientists still don't know what truly exists at the center of a black hole because General Relativity and Quantum Mechanics don't fully agree there.
+</p>
+
+</div>
+
+<div class="fact">
+
+<h3>🌍 Cosmic Importance</h3>
+
+<p>
+Understanding singularities may help scientists discover a unified theory of physics.
+</p>
+
+</div>
+
+</div>
+
+</section>
+<section class="timeline">
+
+<h2>Formation Journey</h2>
+
+<div class="line">
+
+<div class="step">
+⭐ Massive Star
+</div>
+
+<div class="step">
+💥 Supernova
+</div>
+
+<div class="step">
+🕳️ Black Hole
+</div>
+
+<div class="step">
+🌌 Event Horizon
+</div>
+
+<div class="step">
+⚛️ Singularity
+</div>
+
+</div>
+
+</section>
+<footer>
+
+<h2>🌌 COSMIC</h2>
+
+<p>
+Exploring the deepest mysteries of our Universe.
+</p>
+
+<p>
+Made with HTML & CSS • Day 6 Project
+</p>
+
+</footer>
+</body>
+
+</html>

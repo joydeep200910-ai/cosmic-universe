@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nebula | Cosmic Universe</title>
+
+</head>
+<style>
+.info-card{
+    background:rgba(255,255,255,.05);
+    border-radius:20px;
+    padding:25px;
+    backdrop-filter:blur(10px);
+    transition:.4s;
+}
+    .card1 h4{
+    color:#66CCFF;
+}
+
+.card1:hover{
+    box-shadow:0 0 35px #66CCFF;
+}
+.card2 h4{
+    color:#FFD166;
+}
+
+.card2:hover{
+    box-shadow:0 0 35px #FFD166;
+}
+.card3 h4{
+    color:#FF4FC4;
+}
+
+.card3:hover{
+    box-shadow:0 0 35px #FF4FC4;
+}
+.card4 h4{
+   color:#FF6B6B;
+}
+
+.card4:hover{
+    box-shadow:0 0 35px #FF6B6B;
+}
+    .about{
+    padding:120px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-title h2{
+    font-size:58px;
+    color:#E0AFFF;
+    text-shadow:0 0 25px #C77DFF;
+}
+
+.section-title p{
+    margin-top:15px;
+    font-size:20px;
+    color:#cccccc;
+}
+
+.about-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:70px;
+    flex-wrap:wrap;
+}
+
+.about-image{
+    flex:1;
+}
+
+.about-image img{
+    width:100%;
+    max-width:600px;
+    border-radius:25px;
+    transition:.5s;
+    box-shadow:0 0 40px rgba(199,125,255,.35);
+}
+
+.about-image img:hover{
+   transform:scale(1.05) rotate(1deg);
+    box-shadow:0 0 80px #C77DFF;
+}
+
+.about-content{
+    flex:1;
+}
+
+.about-content h3{
+    font-size:42px;
+    color:#FF4FC4;
+    margin-bottom:25px;
+}
+
+.about-content p{
+    color:#dddddd;
+    line-height:1.9;
+    font-size:18px;
+}
+
+.about-cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+    margin-top:40px;
+}
+
+.info-card p{
+    font-size:16px;
+    color:#cccccc;
+}
+    html{
+
+    scroll-behavior:smooth;
+
+}
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+.logo{
+    color:#66ccff;
+    font-size:28px;
+    font-weight:bold;
+}
+nav ul li a:hover,
+nav ul li a.active{
+    color:#66ccff;
+    text-shadow:0 0 15px #66ccff;
+}
+    nav{display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;}
+    body{
+
+background:#050816;
+
+font-family:Arial,Helvetica,sans-serif;
+
+color:white;
+
+margin:0;
+
+}
+
+.hero{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:120px 8%;
+
+gap:60px;
+
+min-height:90vh;
+
+}
+
+.hero-content{
+
+flex:1;
+
+}
+
+.hero-content h1{
+
+font-size:100px;
+
+color:#E0AAFF;
+
+text-shadow:0 0 25px #C77DFF;
+
+margin-bottom:20px;
+
+}
+
+.hero-content h2{
+
+font-size:38px;
+
+color:#F72585;
+
+margin-bottom:25px;
+
+}
+
+.hero-content p{
+
+font-size:20px;
+
+line-height:1.9;
+
+color:#F1E9FF;
+
+margin-bottom:40px;
+
+}
+
+.hero-image{
+
+flex:1;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.hero-image img{
+
+width:100%;
+
+max-width:550px;
+
+border-radius:30px;
+
+box-shadow:0 0 50px rgba(199,125,255,.5);
+
+transition:.5s;
+
+}
+
+.hero-image img:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 80px #C77DFF;
+
+}
+.btn {display:inline-block;
+    margin-top:35px;
+    padding:16px 40px;
+    background:linear-gradient(90deg,#C77DFF,#F72585);
+    color:#fff;
+    text-decoration:none;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:700;
+    transition:.4s;
+    box-shadow:0 0 25px rgba(247,37,133,.5);}
+.btn:hover{
+
+background:#F72585;
+
+color:white;
+
+transform:translateY(-5px);
+
+box-shadow:0 0 35px #F72585;
+
+}
+.famous-nebulae{
+
+    padding:120px 8%;
+
+}
+
+.famous-nebulae h2{
+
+    text-align:center;
+
+    font-size:55px;
+
+    color:#ff4fc4;
+
+    margin-bottom:20px;
+
+}
+
+.section-subtitle{
+
+    text-align:center;
+
+    color:#d6e8ff;
+
+    font-size:20px;
+
+    margin-bottom:70px;
+
+}
+
+.nebula-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+.eagle h3{
+    color:#66CCFF;
+}
+.reveal{
+opacity:0;
+transform:translateY(50px);
+transition:all .8s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+.eagle:hover{
+    box-shadow:0 0 40px #66CCFF;
+}
+.crab h3{
+    color:#FF6B6B;
+}
+
+.crab:hover{
+    box-shadow:0 0 40px #FF6B6B;
+}
+.horse h3{ color:#B26CFF;
+}
+.horse:hover{
+    box-shadow:0 0 40px #B26CFF;
+}
+.nebula-card img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.card-content{
+
+    padding:30px;
+
+}
+
+.card-content h3{
+
+    font-size:30px;
+
+    margin-bottom:20px;
+
+}
+
+.card-content p{
+
+    color:#d6e8ff;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+
+}
+
+.learn-btn{
+
+    display:inline-block;
+
+    padding:12px 30px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:linear-gradient(90deg,#66ccff,#ff4fc4);
+
+    transition:.4s;
+
+}
+
+.learn-btn:hover{
+
+    transform:translateX(8px);
+
+}
+
+.nebula-card:hover{
+
+    transform:translateY(-15px);
+
+}
+
+.nebula-card:hover img{
+
+    transform:scale(1.08);
+
+}
+.footer{
+
+    margin-top:120px;
+
+    padding:70px 8% 40px;
+
+    background:linear-gradient(to top,#111425,#050816);
+
+    text-align:center;
+
+    border-top:2px solid rgba(255,79,196,.35);
+
+}
+
+.footer h2{
+
+    font-size:42px;
+
+    color:#ff4fc4;
+
+    margin-bottom:15px;
+
+    text-shadow:0 0 20px #ff4fc4;
+
+}
+
+.footer p{
+
+    color:#d6e8ff;
+
+    font-size:18px;
+
+    margin-bottom:35px;
+
+    line-height:1.8;
+
+}
+.nebula-card{
+    background:rgba(255,255,255,.06);
+    border-radius:25px;
+    overflow:hidden;
+    backdrop-filter:blur(10px);
+    transition:.5s;
+}
+</style>
+<body>
+
+<div class="stars">
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+<header>
+
+<nav>
+
+<div class="logo">
+
+🌌 Cosmic Universe
+
+</div>
+
+<ul>
+<li><a href="cosmic universe 3.0.html">Home</a></li>
+<li><a href="blackhole 2.0.html">Black Hole</a></li>
+<li><a href="galaxy 2.0.html">Galaxy</a></li>
+<li><a href="nebula 2.0.html"class="active">Nebula</a></li>
+<li><a href="space 2.0.html">Space</a></li>
+<li><a href="quasars 2.0.html">Quasar</a></li>
+<li><a href="Singularity 2.0.html">Singularity</a></li>
+</ul>
+
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Nebula</h1>
+
+<h2>☁️ Cosmic Clouds Where Stars Are Born</h2>
+
+<p>
+
+Nebulae are enormous clouds of gas and dust floating through space.
+They are among the most colourful and breathtaking objects in the universe,
+often serving as the birthplace of new stars.
+
+</p>
+
+<a href="cosmic universe 3.0.html" class="btn">
+
+Explore The Universe →
+
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvozvwVcOEmXCGBYwRji3u5pyz8Mb1tC0b-DMasWk_Zg&s" alt="Nebula">
+
+</div>
+
+</section>
+  <div class="about-container reveal">
+
+        <div class="about-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMBRMwFXhYv4KL4u16TM8jg3e1nxonV8lg1IqF0Z_m4w&s=10" alt="Nebula">
+        </div>
+
+        <div class="about-content">
+
+            <h3>Cosmic Clouds of Creation</h3>
+
+            <p>
+                A nebula is a massive cloud of gas and dust floating through space.
+                These spectacular cosmic structures are the birthplace of stars,
+                planets, and even entire solar systems.
+            </p>
+
+            <div class="about-cards">
+
+                <div class="info-card card1">
+                    <h4>☁️ Gas & Dust</h4>
+                    <p>Mostly made of hydrogen, helium, and tiny cosmic dust particles.</p>
+                </div>
+
+                <div class="info-card card2">
+                    <h4>🌟 Star Factory</h4>
+                    <p>Gravity pulls gas together to create brand-new stars.</p>
+                </div>
+
+                <div class="info-card card3">
+                    <h4>🌈 Colorful Beauty</h4>
+                    <p>Different gases glow in brilliant shades of pink, blue, and purple.</p>
+                </div>
+
+                <div class="info-card card4">
+                    <h4>💥 Stellar Explosion</h4>
+                    <p>Some nebulae are formed after giant stars explode as supernovas.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="famous-nebulae reveal">
+
+    <h2>🌠 Famous Nebulae</h2>
+
+    <p class="section-subtitle">
+        Explore some of the most breathtaking stellar nurseries ever discovered.
+    </p>
+
+    <div class="nebula-grid">
+
+      
+        <div class="nebula-card eagle">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr5IdtYl4iYYPlRnTLWxNgugS1hUataZaP73boYXWnFg&s=10" alt="Eagle Nebula">
+
+            <div class="card-content">
+                <h3>🦅 Eagle Nebula</h3>
+
+                <p>
+                    Home of the famous Pillars of Creation where thousands
+                    of new stars are born.
+                </p>
+
+                <a href="https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-16/" class="learn-btn">Explore →</a>
+            </div>
+        </div>
+
+     
+        <div class="nebula-card crab">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh1pybVNVHoB5TOxoVJCN_FsSYubgadJC6iRXhgBo5JA&s=10" alt="Crab Nebula">
+
+            <div class="card-content">
+                <h3>🦀 Crab Nebula</h3>
+
+                <p>
+                    The beautiful remains of a gigantic star that exploded
+                    nearly one thousand years ago.
+                </p>
+
+                <a href="https://en.wikipedia.org/wiki/Crab_Nebula" class="learn-btn">Explore →</a>
+            </div>
+        </div>
+
+       
+        <div class="nebula-card horse">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN58YaMD1Nv8-iz3_XpHsmcMlicG_5cf5WfqlsUesXFw&s=10" alt="Horsehead Nebula">
+
+            <div class="card-content">
+                <h3>🐎 Horsehead Nebula</h3>
+
+                <p>
+                    A mysterious dark cloud shaped like a horse's head,
+                    silhouetted against glowing gas.
+                </p>
+
+                <a href="https://en.wikipedia.org/wiki/Horsehead_Nebula" class="learn-btn">Explore →</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<footer class="footer">
+
+    <h2>🌌 Cosmic Universe</h2>
+
+    <p>
+        Exploring the mysteries of space, one page at a time.
+    </p>
+
+    <div class="footer-line"></div>
+
+    <p class="copyright">
+        © 2026 Cosmic Universe | Designed and Developed by ❤️ JOYDEEP
+    </p>
+
+</footer>
+<script>
+const reveals=document.querySelectorAll('.reveal');
+
+function revealOnScroll(){
+
+reveals.forEach(element=>{
+
+const windowHeight=window.innerHeight;
+
+const revealTop=element.getBoundingClientRect().top;
+
+if(revealTop<windowHeight-100){
+
+element.classList.add('active');
+
+}
+
+});
+
+}
+
+window.addEventListener('scroll',revealOnScroll);
+
+revealOnScroll();
+</script>
+</body>
+</html>
