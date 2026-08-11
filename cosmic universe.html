@@ -1,0 +1,515 @@
+<!doctype html>
+<hmtl lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+        <title>Cosmic Universe</title>
+    </head>
+    <style>
+        .facts{
+padding:100px 8%;
+
+text-align:center;
+
+}
+
+.facts h2{
+
+font-size:45px;
+
+color:#00ffff;
+
+margin-bottom:60px;
+
+text-shadow:0 0 20px cyan;
+
+}
+
+.facts-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+}
+
+.fact{
+
+background:rgba(255,255,255,.08);
+
+padding:30px;
+
+border-radius:20px;
+
+border:1px solid rgba(0,255,255,.3);
+
+transition:.4s;
+
+}
+
+.fact:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 0 30px cyan;
+
+}
+
+.fact h3{
+
+color:#00ffff;
+
+margin-bottom:15px;
+
+}
+
+.fact p{
+
+color:white;
+
+line-height:1.7;
+
+}
+        footer{
+
+margin-top:120px;
+
+padding:60px 10%;
+
+background:#050816;
+
+border-top:1px solid rgba(0,255,255,.3);
+
+text-align:center;
+
+}
+
+.footer-content h2{
+
+color:#00ffff;
+
+font-size:36px;
+
+margin-bottom:20px;
+
+text-shadow:0 0 15px cyan;
+
+}
+
+.footer-content p{
+
+color:#b8c6db;
+
+margin-bottom:25px;
+
+font-size:18px;
+
+}
+
+.footer-links{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:30px;
+
+margin-bottom:35px;
+
+}
+
+.footer-links a{
+
+color:white;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+color:cyan;
+
+text-shadow:0 0 12px cyan;
+
+}
+
+.copyright{
+
+font-size:15px;
+
+color:#7c8aa0;
+
+}
+        .destinations{
+
+padding:100px 60px;
+
+text-align:center;
+
+}
+
+.destinations h2{
+
+font-size:45px;
+
+color:#00ffff;
+
+margin-bottom:60px;
+
+text-shadow:0 0 20px cyan;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+max-width:850px;
+}
+
+.card{
+
+background:rgba(255,255,255,0.08);
+
+backdrop-filter:blur(12px);
+
+border:1px solid rgba(0,255,255,0.25);
+
+width:220px;
+
+border-radius:20px;
+
+box-shadow:0 0 20px rgba(0,255,255,0.25);
+
+transition:0.4s;
+text-align:center;
+min-height:220px;
+
+padding:35px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:space-between;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 40px cyan;
+
+}
+
+.card h3{
+
+color:#00ffff;
+
+margin-bottom:15px;
+
+}
+
+
+.card a{
+
+display:inline-block;
+
+margin-top:20px;
+
+color:#00ffff;
+
+text-decoration:none;
+
+font-weight:bold;
+
+}
+
+.card a:hover{
+transform:translateY(-10px) scale(1.03);
+
+background:rgba(255,255,255,0.12);
+
+box-shadow:0 0 35px cyan;
+
+}
+        .btn,
+.btn:link,
+.btn:visited{
+    color:#001122;
+    text-decoration:none;
+}
+       body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:#030712;
+    color:white;
+}
+        nav{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:20px 60px;
+
+position:fixed;
+
+top:0;
+
+width:100%;
+
+box-sizing:border-box;
+
+background:rgba(0,0,0,.5);
+
+backdrop-filter:blur(10px);
+
+z-index:1000;
+
+}
+
+.logo{
+
+font-size:30px;
+
+font-weight:bold;
+
+color:#00ffff;
+
+text-shadow:0 0 15px cyan;
+
+}
+
+.nav-links{
+
+display:flex;
+
+list-style:none;
+
+gap:40px;
+
+}
+
+.nav-links a{
+
+text-decoration:none;
+
+color:white;
+
+font-size:18px;
+
+transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+color:#00ffff;
+
+text-shadow:0 0 12px cyan;
+
+}
+        .hero{display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:100px;
+
+padding:120px 8%;
+
+}
+.hero-content{
+    max-width:550px;
+}
+
+.hero h1{
+    font-size:70px;
+    color:#00ffff;
+    text-shadow:0 0 20px cyan;
+    margin-bottom:20px;
+}
+
+.hero h2{
+    font-size:35px;
+    color:cyan;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    color:black;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+
+.btn{display:inline-block;
+    padding:18px 45px;
+    background:#00ffff;
+    color:#001122;
+    text-decoration:none;
+    border-radius:50px;
+    font-size:20px;
+    font-weight:bold;
+    box-shadow:0 0 25px cyan;
+    transition:.4s;
+    animation:pulse 2s infinite;
+}
+
+.btn:hover{
+    background:white;
+    transform:scale(1.08);
+    box-shadow:0 0 35px cyan;
+    color:#001122;}
+    </style>
+    <body>
+<nav>
+
+    <div class="logo">
+
+       🌌 COSMIC
+        
+
+    </div>
+
+    <ul class="nav-links">
+
+        <li><a href="blackhole 2.0.html">Black Hole</a></li>
+
+        <li><a href="space 2.0.html">Space</a></li>
+
+        <li><a href="quasars 2.0.html">Quasars</a></li>
+
+        <li><a href="nebula 2.0.html">Nebula</a></li>
+
+        <li><a href="galaxy 2.0.html">Galaxy</a></li>
+
+        <li><a href="singularity 2.0.html">Singularity</a></li>
+
+    </ul>
+
+</nav>
+<section class="hero">
+
+<div class="hero-content">
+    <h1> 🌌 Cosmic Universe</h1>
+
+    <h2>Explore the wonders beyond the stars</h2>
+    <img src="universe.jfif"
+    alt="UNIVERSE">
+    <a href="https://science.nasa.gov/universe/"
+   class="btn"
+   target="_blank"
+   rel="noopener noreferrer">
+    Explore Universe 🚀
+</a>
+</div>
+<div class="grid">
+<div class="card">
+<h3>☁ Nebula</h3>
+<a href="nebula.html">Explore →</a>
+</div>
+
+<div class="card">
+<h3>🌌 Galaxy</h3>
+<a href="galaxy.html">Explore →</a>
+</div>
+
+<div class="card">
+<h3>🌠 Singularity</h3>
+<a href="singularity.html">Explore →</a>
+</div>
+<div class="card">
+    <h3>🕳 Black Hole</h3>
+    <a href="blackhole.html">Explore →</a>
+</div>
+
+<div class="card">
+    <h3>🌌 Space</h3>
+    <a href="space.html">Explore →</a>
+</div>
+
+<div class="card">
+    <h3>⚡ Quasars</h3>
+    <a href="quasars.html">Explore →</a>
+</div>
+</section>
+<section class="facts">
+
+<h2>🌌 Secrets of the Universe</h2>
+
+<div class="facts-grid">
+
+<div class="fact">
+<h3>🕳 Black Hole</h3>
+<p>A black hole's gravity is so strong that even light cannot escape once it crosses the event horizon.</p>
+</div>
+
+<div class="fact">
+<h3>🌌 Space</h3>
+<p>Space is completely silent because sound needs air to travel, and space is almost a perfect vacuum.</p>
+</div>
+
+<div class="fact">
+<h3>⚡ Quasar</h3>
+<p>Quasars are among the brightest objects in the universe and are powered by supermassive black holes.</p>
+</div>
+
+<div class="fact">
+<h3>☁ Nebula</h3>
+<p>Nebulae are giant clouds of gas and dust where many new stars are born.</p>
+</div>
+
+<div class="fact">
+<h3>🌍 Galaxy</h3>
+<p>The Milky Way contains hundreds of billions of stars and is about 100,000 light-years across.</p>
+</div>
+
+<div class="fact">
+<h3>🪐 Singularity</h3>
+<p>A gravitational singularity is a point where current physics predicts extremely high density and spacetime curvature.</p>
+</div>
+
+</div>
+
+</section>
+<footer>
+
+    <div class="footer-content">
+
+        <h2>🌌 Cosmic Universe</h2>
+
+        <p>Explore the mysteries of the universe through interactive cosmic experiences.</p>
+
+        <p class="copyright">
+
+            © 2026 Cosmic Universe | Built with HTML & CSS
+        </p>
+
+    </div>
+
+</footer>
+    </body>
+
+</hmtl>

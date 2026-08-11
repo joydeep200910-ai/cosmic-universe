@@ -1,0 +1,116 @@
+<!doctype ghtml>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device=width,initial-scale=1.0">
+    <title>NEBULA</title>
+    
+    <link rel="style sheet" href="style.css">
+<style>
+   .hero{
+    text-align:center;
+    padding-top:100px;}
+    h1{font-size:80px;
+        color:#66ccff;
+        text-shadow:0 0 20px cyan;
+        animation:glow 2s infinite,floating 3s ease-in-out infinite;}
+@keyframes imageGlow{
+
+    0%{
+        box-shadow:0 0 20px #ff00ff;
+    }
+
+    50%{
+        box-shadow:0 0 60px #ff00ff,
+                   0 0 100px purple;
+    }
+
+    100%{
+        box-shadow:0 0 20px #ff00ff;
+    }
+
+}
+@keyframes glow {
+    0%{
+        text-shadow:0 0 10px cyan;
+    }
+
+    50%{
+        text-shadow:0 0 40px cyan,
+                    0 0 80px #00ffff;
+    }
+
+    100%{
+        text-shadow:0 0 10px cyan;
+    }
+}
+@keyframes floating{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }}
+
+h2{font-size:60px;
+        color:#66ccff;
+        text-shadow:0 0 20px cyan;
+        animation:glow 2s infinite, floating 3s ease-in-out infinite;}
+p{font-size:24px;
+    color:white;}
+    body{margin:0;
+        padding:0;
+        background:linear-gradient(to bottom,#2E0854,#1A103D,#000000);
+        color:white;
+        font-family:arial,sans-serif;}
+    button{padding:12px 25px;
+        margin:10px;
+        border:none;
+        border-radius:25px;
+        background:#66ccff;
+        color:white;
+        font-size:18px;
+        cursor:pointer;}
+        .intro{width:80%;
+            margin:30px auto;
+            text-align:center;
+            font-size:22px;
+            line-height:1.6;}
+    .image{text-align:center;
+    margin-top:40px;}
+   img{width:500px;
+    border-radius:20px;
+    box-shadow:0 0 30px #ff00ff;
+    transition:0.5;}
+    img:hover{transform:scale(1.05);}
+    img{animation:imageGlow 3S infinite;}
+</style>
+<body>
+ <div class="intro">
+
+    <h1>NEBULA</h1>
+
+    <h2> The birthplace of stars</h2>
+    <p>
+        A nebula (plural: nebulae) is a massive interstellar cloud of dust, hydrogen, helium,
+         and other ionized gases in space. Ranging from dozens to hundreds of light-years across,
+          they act as the universe's stellar nurseries where new stars are born,
+           or as the glowing remnants of dead and exploding stars.
+    </p>
+
+    <button>Explore</button>
+    <button>Learn MORE</button>
+
+</div>
+<div class="image">
+<img src="NEBULA.jfif"
+alt="Nebula">
+</div>
+</body>
+</html>
